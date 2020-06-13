@@ -1,0 +1,20 @@
+<div id="profile">
+  <img src="{{user_image[0].url}}" alt="profile-photo">
+  <h1>{{user_name}}</h1>
+  <ul class="list-inline">
+    <li class="list-inline-item">
+      <h5>{{user_follower.total}}</h5>
+      <p>Followers</p>
+    </li>
+    <li class="list-inline-item">
+      <h5>{{user_following}}</h5>
+      <p>Following</p>
+    </li>
+    <li class="list-inline-item">
+      <h5>8</h5>
+      <p>Playlists</p>
+    </li>
+  </ul>
+
+  <button type="submit" class="btn btn-outline-light" (click)="logout()">LOGOUT</button>
+</div>
