@@ -1,0 +1,141 @@
+#profile {
+  img {
+    width: 150px;
+    border-radius: 75px;
+    margin-top: 80px;
+  }
+
+  h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 20px;
+  }
+
+  ul {
+    margin-top: 20px;
+
+    li {
+      margin: 0px 15px;
+
+      h5 {
+        color: #1db954;
+        font-size: 20px;
+      }
+
+      p {
+        text-transform: uppercase;
+        font-size: 12px;
+        color: #9b9b9b;
+        letter-spacing: 1.5px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  button {
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: 700;
+    padding: 10px 30px;
+    border-radius: 30px;
+  }
+}
+
+
+// Content
+.container-fluid {
+  margin-top: 100px;
+  padding: 0px 150px;
+
+  .artists {
+    h5 {
+      font-size: 19px;
+      font-weight: 900;
+      display: inline-block;
+    }
+
+    button {
+      font-size: 12px;
+      font-weight: 700;
+      display: inline-block;
+      padding: 10px 30px;
+      border-radius: 30px;
+      vertical-align: middle;
+      margin-left: 260px;
+    }
+
+    ul {
+      margin-top: 30px;
+
+      li {
+        list-style: none;
+        margin-top: 30px;
+
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50px;
+        }
+
+        span {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  .tracks {
+    h5 {
+      font-size: 19px;
+      font-weight: 900;
+      display: inline-block;
+    }
+
+    button {
+      font-size: 12px;
+      font-weight: 700;
+      display: inline-block;
+      padding: 10px 30px;
+      border-radius: 30px;
+      vertical-align: middle;
+      margin-left: 260px;
+    }
+
+    ul {
+      margin-top: 30px;
+
+      li {
+        list-style: none;
+        margin-top: 30px;
+
+        img {
+          width: 50px;
+          height: 50px;
+          display: inline-block;
+
+        }
+
+        .artist-info {
+          display: inline-block;
+          vertical-align: middle;
+
+          span {
+            margin-left: 10px;
+          }
+
+          .song {
+            font-size: 16px;
+          }
+
+          .artist-name {
+            font-size: 14px;
+            color: #9b9b9b;
+          }
+        }
+
+      }
+    }
+  }
+
+
+}
