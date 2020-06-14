@@ -10,7 +10,6 @@ import { Router } from "@angular/router";
 export class UserComponent implements OnInit {
   private user_name: string;
   private user_follower: number;
-  private user_following: any;
   private user_image: Array<any>;
   constructor(private router: Router, private userService: UserService) {
     this.user_name = this.userService.getUserProfile().display_name;
@@ -19,15 +18,15 @@ export class UserComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getFollowing();
+    // this.getFollowing();
   }
 
-  getFollowing() {
-    let observable = this.userService.getUserFollowing();
-    observable.subscribe((data) => {
-      console.log(data);
-    });
-  }
+  // getFollowing() {
+  //   let observable = this.userService.getUserFollowing();
+  //   observable.subscribe((data) => {
+  //     console.log(data);
+  //   });
+  // }
 
   logout(): void {
     this.userService.logout();

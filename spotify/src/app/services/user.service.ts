@@ -56,18 +56,6 @@ export class UserService {
     return this.userProfile;
   }
 
-  public getUserFollowing(): Observable<any> {
-    const endpoint = environment.spotifyApi.host + "me";
-
-    const httpOptions = {
-      headers: new HttpHeaders({
-        Authorization: `Bearer ${this.accessToken}`,
-      }),
-    };
-
-    return this.http.get("https://api.spotify.com/v1/me/following?type=artist");
-  }
-
   public logout(): void {
     this.loggedIn = false;
     localStorage.removeItem("ng-spotify-access-token");

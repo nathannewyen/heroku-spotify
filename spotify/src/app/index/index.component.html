@@ -1,6 +1,28 @@
 <div *ngIf="!userService.getLoginStatus()" class="login">
-  <h1>What have I listened to?</h1>
-  <a [href]="loginUrl" class="button button--large button--ah-blue">Login</a>
+
+  <a href="#!">
+    <img src="https://www.logo.wine/a/logo/Spotify/Spotify-Black-Logo.wine.svg" alt="logo" />
+  </a>
+  <hr>
+  <div>
+    <a [href]="loginUrl">
+      <button type="submit" class="btn btn-login text-light">
+        Login
+      </button>
+    </a>
+  </div>
+  <div class="or-line">
+    <hr class="line">
+    <p class="or">OR</p>
+    <hr class="line">
+  </div>
+  <div>
+    <a href="https://www.spotify.com/us/signup/">
+      <button type="submit" class="btn btn-register btn-outline-secondary">
+        Register
+      </button>
+    </a>
+  </div>
 </div>
 
 <!-- After log in -->
@@ -14,7 +36,7 @@
         <h5 class="text-left">Top Artists of All Time</h5>
         <button type="submit" class="btn btn-outline-light ">SEE MORE</button>
         <ul *ngFor="let artist of topArtistsShortTerm; let index = index">
-          <li class="text-left" *ngIf="index < 5">
+          <li class="text-left" *ngIf="index < 10">
             <img src="{{artist.images[1].url}}" alt="test">
             <span>{{ artist.name }}</span>
           </li>
@@ -24,7 +46,7 @@
         <h5 class="text-left">Top Tracks of All Time</h5>
         <button type="submit" class="btn btn-outline-light">SEE MORE</button>
         <ul *ngFor="let track of topTracksShortTerm; let index = index">
-          <li class=" text-left" *ngIf="index < 5">
+          <li class=" text-left" *ngIf="index < 10">
             <img src="{{track.album.images[1].url}}" alt="test">
             <div class="artist-info">
               <span class="song">{{ track.name }}</span>

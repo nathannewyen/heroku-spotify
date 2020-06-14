@@ -1,6 +1,72 @@
 // Profile
 .login {
   height: 100vh;
+  background-color: white;
+  padding: 10px;
+  color: black;
+
+  img {
+    width: 250px;
+    height: 100px;
+  }
+
+  .btn-login {
+    padding: 10px 180px;
+    border-radius: 50px;
+    background-color: #1AB954;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  .btn-login:hover {
+    background-color: #1BD760;
+    transition-timing-function: ease-in;
+    transition: 0.3s;
+  }
+
+  .btn-register {
+    padding: 10px 160px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    a {
+      color: #616467;
+      font-size: 14px;
+    }
+  }
+
+  .btn-register:hover {
+    transition-timing-function: ease-in;
+    transition: 0.3s;
+
+    a {
+      color: white;
+    }
+  }
+
+  .or-line {
+    margin-top: 10px;
+  }
+
+  .or {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    display: inline-block;
+  }
+
+  .line {
+    display: inline-block;
+    width: 180px;
+    height: 1px;
+    vertical-align: middle;
+    margin: 0 20px;
+  }
 }
 
 
@@ -9,6 +75,7 @@
 .container-fluid {
   margin-top: 100px;
   padding: 0px 150px;
+  height: 100vh;
 
   .artists {
     h5 {
