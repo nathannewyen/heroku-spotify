@@ -1,0 +1,54 @@
+.artists {
+  padding: 100px;
+
+  h3 {
+    margin-left: 100px;
+    margin-bottom: 50px;
+  }
+
+  .btn {
+    margin: 0px 5px;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+    color: gray;
+  }
+
+  .btn:hover {
+    color: white;
+    transition-timing-function: ease-in;
+    transition: 0.3s;
+    text-decoration: underline;
+  }
+
+  .four-weeks {
+    height: 100%;
+  }
+
+  ul {
+
+    li {
+      list-style: none;
+      display: inline-block;
+      padding: 15px 25px;
+
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 200px;
+      }
+
+      a {
+        color: white;
+      }
+
+
+
+      p {
+        padding: 10px;
+      }
+    }
+  }
+
+}

@@ -1,4 +1,4 @@
-<div *ngIf="!userService.getLoginStatus()" class="login">
+<div *ngIf="!userService.getLoginStatus()" class="login text-center">
 
   <a href="#!">
     <img src="https://www.logo.wine/a/logo/Spotify/Spotify-Black-Logo.wine.svg" alt="logo" />
@@ -34,11 +34,17 @@
     <div class="info row">
       <div class="col artists">
         <h5 class="text-left">Top Artists of All Time</h5>
-        <button type="submit" class="btn btn-outline-light ">SEE MORE</button>
-        <ul *ngFor="let artist of topArtistsShortTerm; let index = index">
-          <li class="text-left" *ngIf="index < 10">
-            <img src="{{artist.images[1].url}}" alt="test">
-            <span>{{ artist.name }}</span>
+        <button type="submit" class="btn btn-outline-light ">
+          <a [routerLink]="['/artists']"> SEE MORE </a>
+        </button>
+        <ul *ngFor="let artist of topArtistsLongTerm; let index = index">
+          <li class="text-left" *ngIf="index < 5">
+            <a class="image-link" href="{{ artist.external_urls.spotify }}">
+              <img src="{{artist.images[1].url}}" alt="{{artist.name}}">
+            </a>
+            <a class="name-link text-light" href="{{ artist.external_urls.spotify }}">
+              <span>{{ artist.name }}</span>
+            </a>
           </li>
         </ul>
       </div>
@@ -46,10 +52,14 @@
         <h5 class="text-left">Top Tracks of All Time</h5>
         <button type="submit" class="btn btn-outline-light">SEE MORE</button>
         <ul *ngFor="let track of topTracksShortTerm; let index = index">
-          <li class=" text-left" *ngIf="index < 10">
-            <img src="{{track.album.images[1].url}}" alt="test">
+          <li class=" text-left" *ngIf="index < 5">
+            <a class="image-link" href="{{ track.external_urls.spotify }}">
+              <img src="{{track.album.images[1].url}}" alt="test">
+            </a>
             <div class="artist-info">
-              <span class="song">{{ track.name }}</span>
+              <a class="track-link text-light" href="{{ track.external_urls.spotify }}">
+                <span class="song">{{ track.name }}</span>
+              </a>
               <br>
               <span class="artist-name">{{ track.artists[0].name }}</span>
             </div>

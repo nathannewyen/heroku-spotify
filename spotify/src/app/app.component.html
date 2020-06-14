@@ -1,25 +1,25 @@
 <div class="wrapper">
   <!-- Navbar -->
-  <div id="navbar" class="d-inline-block">
+  <div id="navbar" class="d-inline-block ">
     <nav class="text-center">
-      <a href="#!">
+      <a [routerLink]="['']">
         <img src="https://image.flaticon.com/icons/svg/2111/2111624.svg" alt="logo" />
       </a>
       <ul class="navbar-nav text-center">
         <li class="nav-item">
-          <a [routerLink]="['/test']" class="nav-link">
+          <a [routerLink]="['']" class="nav-link">
             <i class="fas fa-user"></i>
             <p>Profile</p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="" class="nav-link">
+          <a [routerLink]="['/artists']" class="nav-link">
             <i class="fas fa-microphone-stand"></i>
             <p>Top Artists</p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="" class="nav-link">
+          <a [routerLink]="['/tracks']" class="nav-link">
             <i class="fas fa-music"></i>
             <p>Top Tracks</p>
           </a>
@@ -47,7 +47,7 @@
   <!-- End Navbar -->
 
   <!-- Content -->
-  <div id="content" class="text-center d-inline-block">
+  <div id="content" class="d-inline-block">
     <router-outlet></router-outlet>
   </div>
 </div>

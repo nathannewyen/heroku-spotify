@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 // Profile
 .login {
   height: 100vh;
@@ -75,7 +79,6 @@
 .container-fluid {
   margin-top: 100px;
   padding: 0px 150px;
-  height: 100vh;
 
   .artists {
     h5 {
@@ -92,6 +95,16 @@
       border-radius: 30px;
       vertical-align: middle;
       margin-left: 260px;
+
+      a {
+        color: white;
+      }
+    }
+
+    button:hover {
+      a {
+        color: black;
+      }
     }
 
     ul {
@@ -143,7 +156,6 @@
           width: 50px;
           height: 50px;
           display: inline-block;
-
         }
 
         .artist-info {
@@ -163,7 +175,6 @@
             color: #9b9b9b;
           }
         }
-
       }
     }
   }

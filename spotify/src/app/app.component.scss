@@ -5,18 +5,17 @@
 @media (min-width: 1025px) {
 
   #content {
-    height: 100%;
     vertical-align: top;
-  }
-
-  #navbar {
-    height: 100vh;
-    position: fixed;
+    background-color: #191919;
+    color: white;
+    width: 100%;
   }
 
   #navbar {
     background-color: black;
     width: 6vw;
+    height: 100vh;
+    position: fixed;
 
     nav {
       margin-top: 30px;
@@ -74,9 +73,4 @@
     }
   }
 
-  #content {
-    width: 100vw;
-    background-color: #191919;
-    color: white;
-  }
 }

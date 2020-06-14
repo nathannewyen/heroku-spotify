@@ -1,1 +1,55 @@
-<p>top-artists works!</p>
+<div class="artists">
+  <h3 class="d-inline-block">Top artists</h3>
+  <div class="button d-inline-block float-right">
+
+    <button class="btn border-0" (click)="selectTerm(0)" [class.button--active]="selectedTerm === 0">All
+      Time</button>
+
+    <button class="btn border-0" (click)="selectTerm(1)" [class.button--active]="selectedTerm === 1">Last 4
+      weeks</button>
+
+    <button class="btn border-0" (click)="selectTerm(2)" [class.button--active]="selectedTerm === 2">Last 6
+      months</button>
+
+  </div>
+
+
+
+  <div class="row text-center">
+    <div class="col">
+      <div *ngIf="selectedTerm === 0" class="all-time">
+        <ul>
+          <li *ngFor="let artists of topArtistsLongTerm; let index = index" class="item">
+            <a href="{{ artists.external_urls.spotify }}" target="_blank"><img src="{{artists.images[1].url}}"
+                alt="test"></a>
+            <p> <a href="{{ artists.external_urls.spotify }}" target="_blank">{{artists.name }}</a>
+            </p>
+          </li>
+        </ul>
+      </div>
+
+
+      <div *ngIf="selectedTerm === 1" class="four-weeks">
+        <ul>
+          <li *ngFor="let artists of topArtistsShortTerm">
+            <a href="{{ artists.external_urls.spotify }}" target="_blank"><img src="{{artists.images[1].url}}"
+                alt="test"></a>
+            <p> <a href="{{ artists.external_urls.spotify }}" target="_blank">{{artists.name }}</a>
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <div *ngIf="selectedTerm === 2" class="six-months">
+        <ul class="list list--orange">
+          <li *ngFor="let artists of topArtistsMediumTerm">
+            <a href="{{ artists.external_urls.spotify }}" target="_blank" class="list__link"><img
+                src="{{artists.images[1].url}}" alt="test"></a>
+            <p> <a href="{{ artists.external_urls.spotify }}" target="_blank" class="list__link">{{artists.name }}</a>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
