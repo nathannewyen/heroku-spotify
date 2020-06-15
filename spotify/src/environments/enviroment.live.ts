@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
-  loginUrl: "http://52.15.104.84/login",
+  loginUrl: "http://heroku-spotify-project.herokuapp.com/login",
   spotifyApi: {
     host: "https://api.spotify.com/v1/",
   },
