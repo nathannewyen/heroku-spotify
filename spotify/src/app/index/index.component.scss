@@ -2,194 +2,198 @@ a {
   text-decoration: none;
 }
 
-// Profile
-.login {
-  height: 100vh;
-  background-color: white;
-  padding: 10px;
-  color: black;
+@media (min-width: 1025px) {
 
-  img {
-    width: 250px;
-    height: 100px;
-  }
+  // Profile
+  .login {
+    height: 100vh;
+    background-color: white;
+    padding: 10px;
+    color: black;
 
-  .btn-login {
-    padding: 10px 180px;
-    border-radius: 50px;
-    background-color: #1AB954;
-    font-weight: 700;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-  }
+    img {
+      width: 250px;
+      height: 100px;
+    }
 
-  .btn-login:hover {
-    background-color: #1BD760;
-    transition-timing-function: ease-in;
-    transition: 0.3s;
-  }
-
-  .btn-register {
-    padding: 10px 160px;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-
-    a {
-      color: #616467;
+    .btn-login {
+      padding: 10px 180px;
+      border-radius: 50px;
+      background-color: #1AB954;
+      font-weight: 700;
       font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
     }
-  }
 
-  .btn-register:hover {
-    transition-timing-function: ease-in;
-    transition: 0.3s;
-
-    a {
-      color: white;
+    .btn-login:hover {
+      background-color: #1BD760;
+      transition-timing-function: ease-in;
+      transition: 0.3s;
     }
-  }
 
-  .or-line {
-    margin-top: 10px;
-  }
+    .btn-register {
+      padding: 10px 160px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
 
-  .or {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    display: inline-block;
-  }
-
-  .line {
-    display: inline-block;
-    width: 180px;
-    height: 1px;
-    vertical-align: middle;
-    margin: 0 20px;
-  }
-}
-
-
-
-// Content
-.container-fluid {
-  margin-top: 100px;
-  padding: 10px 200px;
-
-  // Left Panel
-
-  .artists {
-
-    .left-panel {
-
-      padding: 20px 40px;
-
-      .top-artists {
-        h5 {
-          font-size: 19px;
-          font-weight: 900;
-          margin-left: 40px;
-        }
-
-        ul {
-          margin-top: 30px;
-
-          li {
-            list-style: none;
-            margin-top: 30px;
-
-
-            img {
-              width: 50px;
-              height: 50px;
-              border-radius: 50px;
-            }
-
-            span {
-              margin-left: 20px;
-            }
-          }
-        }
+      a {
+        color: #616467;
+        font-size: 14px;
       }
     }
-  }
 
-  .see-more {
-    button {
-      font-size: 12px;
-      font-weight: 700;
-      display: inline-block;
-      padding: 10px 30px;
-      border-radius: 30px;
-      vertical-align: middle;
+    .btn-register:hover {
+      transition-timing-function: ease-in;
+      transition: 0.3s;
 
       a {
         color: white;
       }
     }
 
-    button:hover {
-      a {
-        color: black;
-      }
+    .or-line {
+      margin-top: 10px;
+    }
+
+    .or {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      display: inline-block;
+    }
+
+    .line {
+      display: inline-block;
+      width: 180px;
+      height: 1px;
+      vertical-align: middle;
+      margin: 0 20px;
     }
   }
 
-  // Right Panel
-  .tracks {
 
-    .right-panel {
-      padding: 20px 40px;
 
-      .top-tracks {
+  // Content
+  .container-fluid {
+    margin-top: 100px;
+    padding: 10px 200px;
 
-        h5 {
-          font-size: 19px;
-          font-weight: 900;
-          margin-left: 40px;
-        }
+    // Left Panel
 
-        ul {
-          margin-top: 30px;
+    .artists {
 
-          li {
-            list-style: none;
-            min-width: 300px;
+      .left-panel {
+
+        padding: 20px 40px;
+
+        .top-artists {
+          h5 {
+            font-size: 19px;
+            font-weight: 900;
+            margin-left: 40px;
+          }
+
+          ul {
             margin-top: 30px;
 
-            img {
-              width: 50px;
-              height: 50px;
-              display: inline-block;
-            }
+            li {
+              list-style: none;
+              margin-top: 30px;
 
-            .artist-info {
-              display: inline-block;
-              vertical-align: middle;
+
+              img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50px;
+              }
 
               span {
-                margin-left: 10px;
-              }
-
-              .song {
-                font-size: 14px;
-              }
-
-              .artist-name {
-                font-size: 14px;
-                color: #9b9b9b;
+                margin-left: 20px;
               }
             }
           }
         }
       }
     }
+
+    .see-more {
+      button {
+        font-size: 12px;
+        font-weight: 700;
+        display: inline-block;
+        padding: 10px 30px;
+        border-radius: 30px;
+        vertical-align: middle;
+
+        a {
+          color: white;
+        }
+      }
+
+      button:hover {
+        a {
+          color: black;
+        }
+      }
+    }
+
+    // Right Panel
+    .tracks {
+
+      .right-panel {
+        padding: 20px 40px;
+
+        .top-tracks {
+
+          h5 {
+            font-size: 19px;
+            font-weight: 900;
+            margin-left: 40px;
+          }
+
+          ul {
+            margin-top: 30px;
+
+            li {
+              list-style: none;
+              min-width: 300px;
+              margin-top: 30px;
+
+              img {
+                width: 50px;
+                height: 50px;
+                display: inline-block;
+              }
+
+              .artist-info {
+                display: inline-block;
+                vertical-align: middle;
+
+                span {
+                  margin-left: 10px;
+                }
+
+                .song {
+                  font-size: 14px;
+                }
+
+                .artist-name {
+                  font-size: 14px;
+                  color: #9b9b9b;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+
   }
-
-
 
 }
