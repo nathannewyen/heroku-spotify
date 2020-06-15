@@ -59,4 +59,4 @@ app.get('/callback', (req, res) => {
 require("./server/config/routes.js")(app);
 
 // Localhost
-app.listen(8000);
+app.listen(5000);
