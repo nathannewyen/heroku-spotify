@@ -59,6 +59,4 @@ app.get('/callback', (req, res) => {
 require("./server/config/routes.js")(app);
 
 // Localhost
-app.listen(port, function() {
-    console.log('server running on localhost:' + port);
-});
+app.listen(8000);
