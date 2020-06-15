@@ -10,6 +10,8 @@ if (process.env.NODE_ENV !== 'production') {
 
 const app = express();
 
+const redirect_uri = "http://52.15.104.84/callback"
+
 app.use(cors());
 // Setting
 app.use(express.static(__dirname + "/spotify/dist/spotify"));
@@ -27,7 +29,7 @@ app.get('/login', (req, res) => {
             response_type: 'code',
             client_id: process.env.SPOTIFY_CLIENT_ID,
             scope: 'user-read-recently-played user-read-private user-read-email user-top-read playlist-modify-public playlist-modify-private playlist-read-private playlist-read-collaborative user-follow-read',
-            redirect_uri: process.env.REDIRECT_URI
+            redirect_uri: redirect_uri
         }));
 });
 
@@ -38,7 +40,7 @@ app.get('/callback', (req, res) => {
         url: 'https://accounts.spotify.com/api/token',
         form: {
             code: code,
-            redirect_uri: process.env.REDIRECT_URI,
+            redirect_uri: redirect_uri,
             grant_type: 'authorization_code'
         },
         headers: {
