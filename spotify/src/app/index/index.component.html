@@ -33,38 +33,50 @@
   <div class="container-fluid">
     <div class="info row">
       <div class="col artists">
-        <h5 class="text-left">Top Artists of All Time</h5>
-        <button type="submit" class="btn btn-outline-light ">
-          <a [routerLink]="['/artists']"> SEE MORE </a>
-        </button>
-        <ul *ngFor="let artist of topArtistsLongTerm; let index = index">
-          <li class="text-left" *ngIf="index < 5">
-            <a class="image-link" href="{{ artist.external_urls.spotify }}">
-              <img src="{{artist.images[1].url}}" alt="{{artist.name}}">
-            </a>
-            <a class="name-link text-light" href="{{ artist.external_urls.spotify }}">
-              <span>{{ artist.name }}</span>
-            </a>
-          </li>
-        </ul>
+        <div class="row left-panel">
+          <div class="col top-artists">
+            <h5 class="text-left">Top Artists of All Time</h5>
+            <ul *ngFor="let artist of topArtistsLongTerm; let index = index">
+              <li class="text-left" *ngIf="index < 10">
+                <a class="image-link" href="{{ artist.external_urls.spotify }}">
+                  <img src="{{artist.images[1].url}}" alt="{{artist.name}}">
+                </a>
+                <a class="name-link text-light" href="{{ artist.external_urls.spotify }}">
+                  <span>{{ artist.name }}</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col see-more">
+            <button type="submit" class="btn btn-outline-light float-right">
+              <a [routerLink]="['/artists']"> SEE MORE </a>
+            </button>
+          </div>
+        </div>
       </div>
       <div class="col tracks">
-        <h5 class="text-left">Top Tracks of All Time</h5>
-        <button type="submit" class="btn btn-outline-light">SEE MORE</button>
-        <ul *ngFor="let track of topTracksShortTerm; let index = index">
-          <li class=" text-left" *ngIf="index < 5">
-            <a class="image-link" href="{{ track.external_urls.spotify }}">
-              <img src="{{track.album.images[1].url}}" alt="test">
-            </a>
-            <div class="artist-info">
-              <a class="track-link text-light" href="{{ track.external_urls.spotify }}">
-                <span class="song">{{ track.name }}</span>
-              </a>
-              <br>
-              <span class="artist-name">{{ track.artists[0].name }}</span>
-            </div>
-          </li>
-        </ul>
+        <div class="row right-panel">
+          <div class="col top-tracks">
+            <h5 class="text-left">Top Tracks of All Time</h5>
+            <ul *ngFor="let track of topTracksShortTerm; let index = index">
+              <li class=" text-left" *ngIf="index < 10">
+                <a class="image-link" href="{{ track.external_urls.spotify }}">
+                  <img src="{{track.album.images[1].url}}" alt="test">
+                </a>
+                <div class="artist-info">
+                  <a class="track-link text-light" href="{{ track.external_urls.spotify }}">
+                    <span class="song">{{ track.name }}</span>
+                  </a>
+                  <br>
+                  <span class="artist-name">{{ track.artists[0].name }}</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col see-more">
+            <button type="submit" class="btn btn-outline-light float-right">SEE MORE</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

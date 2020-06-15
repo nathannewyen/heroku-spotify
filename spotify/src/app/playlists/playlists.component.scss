@@ -1,0 +1,34 @@
+@media (min-width: 1025px) {
+  .playlists {
+
+    margin-left: 6vw;
+    min-height: 100vh;
+    padding: 100px 0px 100px 150px;
+
+    h3 {
+      margin-bottom: 50px;
+    }
+
+    .playlist-info {
+      padding: 10px;
+      width: 250px;
+      vertical-align: top;
+      font-size: 16px;
+      letter-spacing: 1.5px;
+      font-weight: 400;
+
+      img {
+        width: 230px;
+      }
+
+      .track {
+        margin-top: 20px;
+
+        .total {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+}

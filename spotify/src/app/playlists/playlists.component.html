@@ -1,1 +1,17 @@
-<p>playlists works!</p>
+<div class="playlists">
+  <h3>Your Playlists</h3>
+  <div class="playlist-info text-center d-inline-block" *ngFor="let playlist of playlists">
+    <a href="{{playlist.external_urls.spotify}}">
+      <img src="{{playlist.images[0].url}}" alt="{{playlist.name}}">
+    </a>
+    <div class="track">
+      <span>
+        <a href="{{playlist.external_urls.spotify}}" class="text-light">{{playlist.name}}</a>
+      </span>
+      <br>
+      <span class="total text-secondary">{{playlist.tracks.total}} TRACKS</span>
+    </div>
+
+  </div>
+
+</div>

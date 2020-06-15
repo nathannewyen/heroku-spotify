@@ -1,1 +1,19 @@
-<p>recents works!</p>
+<div class="recent">
+  <h4>Recently Played Tracks</h4>
+
+  <div class="recent-song" *ngFor="let recent of user_current_tracks">
+    <ul>
+      <li>
+        <img src="{{recent.track.album.images[2].url}}" alt="{{recent.track.name}}" class="d-inline-block">
+        <div class="info d-inline-block">
+          <span class="song">{{ recent.track.name }}</span>
+          <br>
+          <span class="artist-name text-secondary">
+            {{ recent.track.artists[0].name }}・{{ recent.track.name }}
+          </span>
+        </div>
+        <p class="d-inline-block time text-secondary float-right">{{recent.track.duration_ms | date:'m:ss'}}</p>
+      </li>
+    </ul>
+  </div>
+</div>

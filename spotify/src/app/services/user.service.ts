@@ -44,6 +44,45 @@ export class UserService {
     return this.http.get(endpoint, httpOptions);
   }
 
+  // Get User Playlists
+  public getUserPlaylists(): Observable<any> {
+    const endpoint = environment.spotifyApi.host + "me/playlists";
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${this.accessToken}`,
+      }),
+    };
+
+    return this.http.get(endpoint, httpOptions);
+  }
+
+  // Get User Following
+  public getUserFollowing(): Observable<any> {
+    const endpoint = environment.spotifyApi.host + "me/following?type=artist";
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${this.accessToken}`,
+      }),
+    };
+
+    return this.http.get(endpoint, httpOptions);
+  }
+
+  // Get Current User Playing Track
+  public getUserCurrentTrack(): Observable<any> {
+    const endpoint = environment.spotifyApi.host + "me/player/recently-played";
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${this.accessToken}`,
+      }),
+    };
+
+    return this.http.get(endpoint, httpOptions);
+  }
+
   public getAccessToken(): string {
     return this.accessToken;
   }

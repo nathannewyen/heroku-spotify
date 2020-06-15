@@ -78,15 +78,47 @@ a {
 // Content
 .container-fluid {
   margin-top: 100px;
-  padding: 0px 150px;
+  padding: 10px 200px;
+
+  // Left Panel
 
   .artists {
-    h5 {
-      font-size: 19px;
-      font-weight: 900;
-      display: inline-block;
-    }
 
+    .left-panel {
+
+      padding: 20px 40px;
+
+      .top-artists {
+        h5 {
+          font-size: 19px;
+          font-weight: 900;
+          margin-left: 40px;
+        }
+
+        ul {
+          margin-top: 30px;
+
+          li {
+            list-style: none;
+            margin-top: 30px;
+
+
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50px;
+            }
+
+            span {
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .see-more {
     button {
       font-size: 12px;
       font-weight: 700;
@@ -94,7 +126,6 @@ a {
       padding: 10px 30px;
       border-radius: 30px;
       vertical-align: middle;
-      margin-left: 260px;
 
       a {
         color: white;
@@ -106,78 +137,59 @@ a {
         color: black;
       }
     }
-
-    ul {
-      margin-top: 30px;
-
-      li {
-        list-style: none;
-        margin-top: 30px;
-
-
-        img {
-          width: 50px;
-          height: 50px;
-          border-radius: 50px;
-        }
-
-        span {
-          margin-left: 20px;
-        }
-      }
-    }
   }
 
+  // Right Panel
   .tracks {
-    h5 {
-      font-size: 19px;
-      font-weight: 900;
-      display: inline-block;
-    }
 
-    button {
-      font-size: 12px;
-      font-weight: 700;
-      display: inline-block;
-      padding: 10px 30px;
-      border-radius: 30px;
-      vertical-align: middle;
-      margin-left: 260px;
-    }
+    .right-panel {
+      padding: 20px 40px;
 
-    ul {
-      margin-top: 30px;
+      .top-tracks {
 
-      li {
-        list-style: none;
-        margin-top: 30px;
-
-        img {
-          width: 50px;
-          height: 50px;
-          display: inline-block;
+        h5 {
+          font-size: 19px;
+          font-weight: 900;
+          margin-left: 40px;
         }
 
-        .artist-info {
-          display: inline-block;
-          vertical-align: middle;
+        ul {
+          margin-top: 30px;
 
-          span {
-            margin-left: 10px;
-          }
+          li {
+            list-style: none;
+            min-width: 300px;
+            margin-top: 30px;
 
-          .song {
-            font-size: 16px;
-          }
+            img {
+              width: 50px;
+              height: 50px;
+              display: inline-block;
+            }
 
-          .artist-name {
-            font-size: 14px;
-            color: #9b9b9b;
+            .artist-info {
+              display: inline-block;
+              vertical-align: middle;
+
+              span {
+                margin-left: 10px;
+              }
+
+              .song {
+                font-size: 14px;
+              }
+
+              .artist-name {
+                font-size: 14px;
+                color: #9b9b9b;
+              }
+            }
           }
         }
       }
     }
   }
+
 
 
 }

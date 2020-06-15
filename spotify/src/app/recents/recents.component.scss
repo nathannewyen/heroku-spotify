@@ -1,0 +1,38 @@
+@media (min-width: 1025px) {
+  .recent {
+    margin-left: 6vw;
+    padding: 80px 100px;
+
+    h4 {
+      margin-left: 50px;
+      margin-bottom: 40px;
+    }
+
+    img {
+      width: 50px;
+    }
+
+    .recent-song {
+      ul {
+        li {
+          list-style: none;
+          padding: 8px 10px;
+
+          .info {
+            vertical-align: middle;
+            margin-left: 20px;
+            font-size: 16px;
+
+            .artist-name {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    .time {
+      font-size: 14px;
+    }
+  }
+}

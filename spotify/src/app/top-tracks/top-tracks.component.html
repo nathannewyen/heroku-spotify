@@ -13,40 +13,10 @@
 
   </div>
 
-  <div class="row text-center">
-    <div class="col">
-      <div *ngIf="selectedTerm === 1" class="panel panel--blue">
-        <ul class="list list--blue">
-          <li *ngFor="let track of topTracksShortTerm; let index = index" class="text-left">
-            <a class="image-link" href="{{ track.external_urls.spotify }}">
-              <img src="{{track.album.images[1].url}}" alt="test">
-            </a>
-            <div class="artist-info">
-              <a class="track-link text-light" href="{{ track.external_urls.spotify }}">
-                <span class="song">{{ track.name }}</span>
-              </a>
-              <br>
-              <span class="artist-name">{{ track.artists[0].name }}</span>
-            </div>
-        </ul>
-      </div>
 
-      <div *ngIf="selectedTerm === 2" class="panel panel--orange">
-        <ul class="list list--orange">
-          <li *ngFor="let track of topTracksMediumTerm; let index = index" class="text-left">
-            <a class="image-link" href="{{ track.external_urls.spotify }}">
-              <img src="{{track.album.images[1].url}}" alt="test">
-            </a>
-            <div class="artist-info">
-              <a class="track-link text-light" href="{{ track.external_urls.spotify }}">
-                <span class="song">{{ track.name }}</span>
-              </a>
-              <br>
-              <span class="artist-name">{{ track.artists[0].name }}</span>
-            </div>
-          </li>
-        </ul>
-      </div>
+  <div class="row text-center">
+
+    <div class="col">
 
       <div *ngIf="selectedTerm === 0" class="clearfix">
         <ul class="list list--yellow">
@@ -63,7 +33,48 @@
                 <span class="artist-name">{{ track.artists[0].name }}</span>
               </div>
             </div>
-            <p class="d-inline-block float-right">{{track.duration_ms | date:'m:ss'}}</p>
+            <p class="d-inline-block time text-secondary float-right">{{track.duration_ms | date:'m:ss'}}</p>
+          </li>
+        </ul>
+      </div>
+
+
+      <div *ngIf="selectedTerm === 1" class="clearfix">
+        <ul class="list list--yellow">
+          <li class="text-left" *ngFor="let track of topTracksShortTerm; let index = index">
+            <div class="song d-inline-block">
+              <a class="image-link" href="{{ track.external_urls.spotify }}">
+                <img src="{{track.album.images[1].url}}" alt="test">
+              </a>
+              <div class="artist-info">
+                <a class="track-link text-light" href="{{ track.external_urls.spotify }}">
+                  <span class="song">{{ track.name }}</span>
+                </a>
+                <br>
+                <span class="artist-name">{{ track.artists[0].name }}</span>
+              </div>
+            </div>
+            <p class="d-inline-block time text-secondary float-right">{{track.duration_ms | date:'m:ss'}}</p>
+          </li>
+        </ul>
+      </div>
+
+      <div *ngIf="selectedTerm === 2" class="clearfix">
+        <ul class="list list--yellow">
+          <li class="text-left" *ngFor="let track of topTracksMediumTerm; let index = index">
+            <div class="song d-inline-block">
+              <a class="image-link" href="{{ track.external_urls.spotify }}">
+                <img src="{{track.album.images[1].url}}" alt="test">
+              </a>
+              <div class="artist-info">
+                <a class="track-link text-light" href="{{ track.external_urls.spotify }}">
+                  <span class="song">{{ track.name }}</span>
+                </a>
+                <br>
+                <span class="artist-name">{{ track.artists[0].name }}</span>
+              </div>
+            </div>
+            <p class="d-inline-block time text-secondary float-right">{{track.duration_ms | date:'m:ss'}}</p>
           </li>
         </ul>
       </div>
