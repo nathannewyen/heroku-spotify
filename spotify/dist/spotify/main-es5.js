@@ -2386,9 +2386,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var environment = {
       production: false,
-      loginUrl: 'http://52.15.104.84/login',
+      loginUrl: "http://heroku-spotify-project.herokuapp.com/login",
       spotifyApi: {
-        host: 'https://api.spotify.com/v1/'
+        host: "https://api.spotify.com/v1/"
       }
     };
     /*

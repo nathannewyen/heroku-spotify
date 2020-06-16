@@ -1305,10 +1305,10 @@ __webpack_require__.r(__webpack_exports__);
 
 const environment = {
     production: false,
-    loginUrl: 'http://52.15.104.84/login',
+    loginUrl: "http://heroku-spotify-project.herokuapp.com/login",
     spotifyApi: {
-        host: 'https://api.spotify.com/v1/'
-    }
+        host: "https://api.spotify.com/v1/",
+    },
 };
 /*
  * For easier debugging in development mode, you can import the following file
