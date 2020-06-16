@@ -4,7 +4,7 @@
 
 export const environment = {
 	production: false,
-	loginUrl: 'http://heroku-spotify-project.herokuapp.com/login',
+	loginUrl: 'http://localhost:8000/login',
 	spotifyApi: {
 		host: 'https://api.spotify.com/v1/'
 	}
