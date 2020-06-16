@@ -1,6 +1,7 @@
 a {
   text-decoration: none;
 }
+
 .modal {
   display: none;
   position: fixed;
@@ -9,8 +10,7 @@ a {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(255, 255, 255, 0.8) url("http://i.stack.imgur.com/FhHRx.gif")
-    50% 50% no-repeat;
+  background: rgba(255, 255, 255, 0.8) url("http://i.stack.imgur.com/FhHRx.gif") 50% 50% no-repeat;
 }
 
 body.loading .modal {
@@ -24,6 +24,7 @@ body.loading .modal {
 // iMac 27 ->
 
 @media (min-width: 1800px) {
+
   // Profile
   .login {
     height: 100vh;
@@ -304,6 +305,7 @@ body.loading .modal {
 
 // Macbook 13 - 15
 @media (min-width: 1025px) {
+
   // Profile
   .login {
     height: 100vh;
@@ -400,6 +402,56 @@ body.loading .modal {
               list-style: none;
               margin-top: 30px;
 
+              // Hover image
+
+              .image {
+                position: relative;
+                display: inline-block;
+                overflow: hidden;
+                vertical-align: middle;
+
+                span {
+                  font-size: 24px;
+                }
+              }
+
+              .image:hover {
+                img {
+                  opacity: 0.5;
+                  transition-timing-function: ease-in;
+                  transition: 0.4s;
+                }
+              }
+
+              .image:hover a {
+                opacity: 1;
+                top: 0;
+                z-index: 500;
+              }
+
+              .image:hover a span {
+                top: 50%;
+                position: absolute;
+                left: -20px;
+                right: 0;
+                transform: translateY(-50%);
+              }
+
+              .image a {
+                display: block;
+                position: absolute;
+                top: 100%;
+                opacity: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                text-align: center;
+                color: inherit;
+              }
+
+              // End hover
+
+
               img {
                 width: 50px;
                 height: 50px;
@@ -445,6 +497,55 @@ body.loading .modal {
               list-style: none;
               min-width: 300px;
               margin-top: 30px;
+
+              // Hover image
+
+              .image {
+                position: relative;
+                display: inline-block;
+                overflow: hidden;
+                vertical-align: middle;
+
+                span {
+                  font-size: 24px;
+                }
+              }
+
+              .image:hover {
+                img {
+                  opacity: 0.5;
+                  transition-timing-function: ease-in;
+                  transition: 0.4s;
+                }
+              }
+
+              .image:hover a {
+                opacity: 1;
+                top: 0;
+                z-index: 500;
+              }
+
+              .image:hover a span {
+                top: 50%;
+                position: absolute;
+                left: 0;
+                right: 0;
+                transform: translateY(-50%);
+              }
+
+              .image a {
+                display: block;
+                position: absolute;
+                top: 100%;
+                opacity: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                text-align: center;
+                color: inherit;
+              }
+
+              // End hover
 
               img {
                 width: 50px;
