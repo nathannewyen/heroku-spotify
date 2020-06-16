@@ -1,3 +1,47 @@
+// iMac 27
+@media (min-width: 1800px) {
+  .playlists {
+    min-height: 100vh;
+    padding: 100px !important;
+    width: 60% !important;
+    margin: 0 auto !important;
+
+    h3 {
+      margin-bottom: 50px;
+    }
+
+    .playlist-info {
+      padding: 10px;
+      width: 250px;
+      vertical-align: top;
+      font-size: 16px;
+      letter-spacing: 1.5px;
+      font-weight: 400;
+
+      img {
+        width: 230px;
+      }
+
+      img:hover {
+        opacity: 0.5;
+        transition-timing-function: ease;
+        transition: 0.4s;
+      }
+
+      .track {
+        margin-top: 20px;
+
+        .total {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+}
+
+
+// Macbook 13 - 15
 @media (min-width: 1025px) {
   .playlists {
 
@@ -19,6 +63,12 @@
 
       img {
         width: 230px;
+      }
+
+      img:hover {
+        opacity: 0.5;
+        transition-timing-function: ease-in-out;
+        transition: 0.4s;
       }
 
       .track {

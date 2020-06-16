@@ -4,7 +4,12 @@
   <div class="recent-song" *ngFor="let recent of user_current_tracks">
     <ul>
       <li>
-        <img src="{{recent.track.album.images[2].url}}" alt="{{recent.track.name}}" class="d-inline-block">
+        <div class="image d-inline-block">
+          <img src="{{recent.track.album.images[2].url}}" alt="{{recent.track.name}}" class="d-inline-block">
+          <a class="track-link text-light" href="{{ recent.track.external_urls.spotify }}">
+            <span class="fas fa-info-circle"></span>
+          </a>
+        </div>
         <div class="info d-inline-block">
           <span class="song">{{ recent.track.name }}</span>
           <br>

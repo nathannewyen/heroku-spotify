@@ -20,8 +20,12 @@
       <div *ngIf="selectedTerm === 0" class="all-time">
         <ul>
           <li *ngFor="let artists of topArtistsLongTerm; let index = index" class="item">
-            <a href="{{ artists.external_urls.spotify }}" target="_blank"><img src="{{artists.images[1].url}}"
-                alt="test"></a>
+            <div class="image">
+              <img src="{{artists.images[1].url}}" alt="test">
+              <a href="{{ artists.external_urls.spotify }}" target="_blank">
+                <span class="fas fa-info-circle"></span>
+              </a>
+            </div>
             <p> <a href="{{ artists.external_urls.spotify }}" target="_blank">{{artists.name }}</a>
             </p>
           </li>

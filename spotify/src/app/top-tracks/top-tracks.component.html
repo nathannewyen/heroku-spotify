@@ -22,9 +22,12 @@
         <ul class="list list--yellow">
           <li class="text-left" *ngFor="let track of topTracksLongTerm; let index = index">
             <div class="song d-inline-block">
-              <a class="image-link" href="{{ track.external_urls.spotify }}">
+              <div class="image d-inline-block">
                 <img src="{{track.album.images[1].url}}" alt="test">
-              </a>
+                <a class="image-link" href="{{ track.external_urls.spotify }}">
+                  <span class="fas fa-info-circle"></span>
+                </a>
+              </div>
               <div class="artist-info">
                 <a class="track-link text-light" href="{{ track.external_urls.spotify }}">
                   <span class="song">{{ track.name }}</span>

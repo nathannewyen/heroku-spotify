@@ -5,6 +5,8 @@ import { UserService } from "./services/user.service";
 import { TracksService } from "./services/tracks.service";
 import { ArtistsService } from "./services/artists.service";
 
+declare var $: any;
+
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -24,6 +26,15 @@ export class AppComponent {
   ngOnInit() {
     const itemId = "ng-spotify-access-token";
     const accessToken = localStorage.getItem(itemId);
+
+    // jQuery
+    $(".nav-item").click(function () {
+      $(".nav-item").removeClass("active");
+      $(".nav-item").addClass("next");
+      $(this).addClass("active");
+    });
+
+    // End jQuery
 
     if (accessToken) {
       this.userService

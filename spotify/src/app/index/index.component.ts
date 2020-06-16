@@ -4,6 +4,9 @@ import { environment } from "../../environments/environment";
 import { ArtistsService } from "../services/artists.service";
 import { TracksService } from "../services/tracks.service";
 import { Router } from "@angular/router";
+import { Observable } from "rxjs";
+declare var $: any;
+
 @Component({
   selector: "app-index",
   templateUrl: "./index.component.html",
@@ -29,6 +32,10 @@ export class IndexComponent implements OnInit {
   }
 
   ngOnInit() {
+    // jQuery
+
+    // End jQUery
+
     this.artistsService.topArtists$.subscribe((res) => {
       this.topArtistsShortTerm = res.shortTerm;
       this.topArtistsMediumTerm = res.mediumTerm;
