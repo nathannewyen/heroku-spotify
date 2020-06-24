@@ -285,7 +285,7 @@ a {
 }
 
 // Macbook 13 - 15
-@media (min-width: 1025px) {
+@media (min-width: 1300px) {
 
   // Profile
   .login {
@@ -361,7 +361,8 @@ a {
   // Content
   .container-fluid {
     margin-top: 100px;
-    padding: 0px 20px;
+    padding: 0px 100px;
+    min-height: 40vh;
 
     // Left Panel
 
