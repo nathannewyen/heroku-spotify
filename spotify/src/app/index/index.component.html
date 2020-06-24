@@ -1,9 +1,6 @@
 <div *ngIf="!userService.getLoginStatus()" class="login text-center">
   <a href="#!">
-    <img
-      src="https://www.logo.wine/a/logo/Spotify/Spotify-Black-Logo.wine.svg"
-      alt="logo"
-    />
+    <img src="https://www.logo.wine/a/logo/Spotify/Spotify-Black-Logo.wine.svg" alt="logo" />
   </a>
   <hr />
   <div>
@@ -40,32 +37,19 @@
             <ul *ngFor="let artist of topArtistsLongTerm; let index = index">
               <li class="text-left" *ngIf="index < 10">
                 <div class="image d-inline-block">
-                  <img
-                    src="{{ artist.images[1].url }}"
-                    alt="{{ artist.name }}"
-                  />
-                  <a
-                    class="image-link"
-                    href="{{ artist.external_urls.spotify }}"
-                  >
+                  <img src="{{ artist.images[1].url }}" alt="{{ artist.name }}" />
+                  <a class="image-link" [routerLink]="['/artists', artist.id]">
                     <span class="fas fa-info-circle"></span>
                   </a>
                 </div>
-                <a
-                  class="name-link text-light"
-                  href="{{ artist.external_urls.spotify }}"
-                >
+                <a class="name-link text-light" [routerLink]="['/artists', artist.id]">
                   <span>{{ artist.name }}</span>
                 </a>
               </li>
             </ul>
           </div>
-          <div class="col see-more">
-            <button
-              type="submit"
-              class="btn btn-outline-light float-right"
-              [routerLink]="['/artists']"
-            >
+          <div class=" col see-more">
+            <button type="submit" class="btn btn-outline-light float-right" [routerLink]="['/artists']">
               SEE MORE
             </button>
           </div>
@@ -74,30 +58,22 @@
       <div class="col tracks">
         <div class="row right-panel">
           <div class="col top-tracks">
-            <h5 class="text-left">Top Tracks of All Time</h5>
+            <h5 class="text-left ">Top Tracks of All Time</h5>
             <ul *ngFor="let track of topTracksShortTerm; let index = index">
               <li class="text-left" *ngIf="index < 10">
                 <div class="left d-inline-block">
                   <div class="image d-inline-block">
                     <img src="{{ track.album.images[1].url }}" alt="test" />
-                    <a
-                      class="image-link text-light"
-                      href="{{ track.external_urls.spotify }}"
-                    >
+                    <a class="image-link text-light" href="{{ track.external_urls.spotify }}">
                       <span class="fas fa-info-circle"></span>
                     </a>
                   </div>
                   <div class="artist-info">
-                    <a
-                      class="track-link text-light"
-                      href="{{ track.external_urls.spotify }}"
-                    >
+                    <a class="track-link text-light" href="{{ track.external_urls.spotify }}">
                       <span class="song">{{ track.name }}</span>
                     </a>
                     <br />
-                    <span class="artist-name"
-                      >{{ track.artists[0].name }}・{{ track.name }}</span
-                    >
+                    <span class="artist-name">{{ track.artists[0].name }}・{{ track.name }}</span>
                   </div>
                 </div>
                 <p class="d-inline-block time text-secondary float-right">
@@ -107,11 +83,7 @@
             </ul>
           </div>
           <div class="col see-more">
-            <button
-              type="submit"
-              class="btn btn-outline-light float-right"
-              [routerLink]="['/tracks']"
-            >
+            <button type="submit" class="btn btn-outline-light float-right" [routerLink]="['/tracks']">
               SEE MORE
             </button>
           </div>

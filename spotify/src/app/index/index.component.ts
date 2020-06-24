@@ -32,10 +32,6 @@ export class IndexComponent implements OnInit {
   }
 
   ngOnInit() {
-    // jQuery
-
-    // End jQUery
-
     this.artistsService.topArtists$.subscribe((res) => {
       this.topArtistsShortTerm = res.shortTerm;
       this.topArtistsMediumTerm = res.mediumTerm;

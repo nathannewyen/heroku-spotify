@@ -11,6 +11,7 @@ import { RecentsComponent } from "./recents/recents.component";
 import { PlaylistsComponent } from "./playlists/playlists.component";
 import { UserComponent } from "./user/user.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { ArtistProfileComponent } from './artist-profile/artist-profile.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
     RecentsComponent,
     PlaylistsComponent,
     UserComponent,
+    ArtistProfileComponent,
   ],
   imports: [
     BrowserModule,

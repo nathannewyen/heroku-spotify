@@ -11,6 +11,7 @@ export class UserService {
   private accessToken: string;
   private loggedIn: boolean;
   private userProfile: UserProfile;
+  private artistId: string;
 
   constructor(private http: HttpClient) {}
 
@@ -73,6 +74,20 @@ export class UserService {
   // Get Current User Playing Track
   public getUserCurrentTrack(): Observable<any> {
     const endpoint = environment.spotifyApi.host + "me/player/recently-played";
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${this.accessToken}`,
+      }),
+    };
+
+    return this.http.get(endpoint, httpOptions);
+  }
+
+  // Get Artist Profile
+  public getArtistProfile(): Observable<any> {
+    const id = this.artistId;
+    const endpoint = environment.spotifyApi.host + `artists/${id}`;
 
     const httpOptions = {
       headers: new HttpHeaders({

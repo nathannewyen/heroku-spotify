@@ -2,27 +2,7 @@ a {
   text-decoration: none;
 }
 
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.8) url("http://i.stack.imgur.com/FhHRx.gif") 50% 50% no-repeat;
-}
-
-body.loading .modal {
-  overflow: hidden;
-}
-
-body.loading .modal {
-  display: block;
-}
-
 // iMac 27 ->
-
 @media (min-width: 1800px) {
 
   // Profile
@@ -99,6 +79,7 @@ body.loading .modal {
   // Content
   .container-fluid {
     margin-top: 80px !important;
+    min-height: 76vh;
     // Left Panel
 
     .artists {
@@ -380,7 +361,7 @@ body.loading .modal {
   // Content
   .container-fluid {
     margin-top: 100px;
-    padding: 10px 200px;
+    padding: 0px 20px;
 
     // Left Panel
 
@@ -391,6 +372,7 @@ body.loading .modal {
         .top-artists {
           h5 {
             font-size: 19px;
+            width: 200px;
             font-weight: 900;
             margin-left: 40px;
           }
@@ -401,6 +383,7 @@ body.loading .modal {
             li {
               list-style: none;
               margin-top: 30px;
+              width: 200px;
 
               // Hover image
 
@@ -481,12 +464,13 @@ body.loading .modal {
     // Right Panel
     .tracks {
       .right-panel {
-        padding: 20px 40px;
+        padding: 20px 0px;
 
         .top-tracks {
           h5 {
             font-size: 19px;
             font-weight: 900;
+            width: 300px;
             margin-left: 40px;
           }
 
@@ -495,7 +479,7 @@ body.loading .modal {
 
             li {
               list-style: none;
-              min-width: 300px;
+              min-width: 430px;
               margin-top: 30px;
 
               // Hover image

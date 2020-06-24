@@ -1,13 +1,15 @@
 .wrapper {
   font-family: "Circular Std", sans-serif;
 }
+
 // iMac 27
-@media (min-width: 1800px) {
+@media (min-width: 1600px) {
   #content {
     vertical-align: top;
     background-color: #191919;
     color: white;
     width: 100%;
+    min-height: 100vh;
   }
 
   #navbar {
@@ -79,12 +81,14 @@
       bottom: 100px;
       left: 20px;
       position: absolute;
+
       i {
         font-size: 35px;
       }
     }
 
     .bottom:hover {
+
       a {
         color: #519bf5;
         transition-timing-function: ease-in;
@@ -105,7 +109,7 @@
 
   #navbar {
     background-color: black;
-    width: 6vw;
+    width: 8vw;
     min-height: 100vh;
     position: fixed;
 
@@ -164,6 +168,8 @@
     }
 
     .bottom {
+      margin-top: 500px;
+
       i {
         font-size: 30px;
       }
