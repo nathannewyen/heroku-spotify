@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>artist-profile works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container-fluid\" *ngIf=\"artist\">\n  <p>{{artist.name}}</p>\n</div>\n");
 
 /***/ }),
 
@@ -629,7 +629,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FydGlzdC1wcm9maWxlL2FydGlzdC1wcm9maWxlLmNvbXBvbmVudC5zY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".container-fluid {\n  margin-left: 10vw;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9uaGFubmd1eWVuL0Rlc2t0b3Avc3BvdGlmeV9wcm9qZWN0L3Nwb3RpZnkvc3JjL2FwcC9hcnRpc3QtcHJvZmlsZS9hcnRpc3QtcHJvZmlsZS5jb21wb25lbnQuc2NzcyIsInNyYy9hcHAvYXJ0aXN0LXByb2ZpbGUvYXJ0aXN0LXByb2ZpbGUuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBQTtBQ0NGIiwiZmlsZSI6InNyYy9hcHAvYXJ0aXN0LXByb2ZpbGUvYXJ0aXN0LXByb2ZpbGUuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFpbmVyLWZsdWlkIHtcbiAgbWFyZ2luLWxlZnQ6IDEwdnc7XG59XG4iLCIuY29udGFpbmVyLWZsdWlkIHtcbiAgbWFyZ2luLWxlZnQ6IDEwdnc7XG59Il19 */");
 
 /***/ }),
 
@@ -647,29 +647,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/user.service */ "./src/app/services/user.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+
 
 
 
 
 let ArtistProfileComponent = class ArtistProfileComponent {
-    constructor(router, userService) {
+    constructor(router, userService, route) {
         this.router = router;
         this.userService = userService;
+        this.route = route;
     }
     ngOnInit() {
-        this.getArtist();
-    }
-    getArtist() {
-        let observable = this.userService.getArtistProfile();
-        observable.subscribe((data) => {
-            this.artist_name = data.artists;
-            console.log(this.artist_name);
+        this.route.params.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])((params) => params["id"])).subscribe((id) => {
+            this.userService.getArtistProfile(id).subscribe((artist) => {
+                this.artist = artist;
+                console.log(this.artist);
+            });
         });
     }
 };
 ArtistProfileComponent.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
-    { type: _services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] }
+    { type: _services_user_service__WEBPACK_IMPORTED_MODULE_2__["UserService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] }
 ];
 ArtistProfileComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1146,9 +1148,8 @@ let UserService = class UserService {
         return this.http.get(endpoint, httpOptions);
     }
     // Get Artist Profile
-    getArtistProfile() {
-        const id = this.artistId;
-        const endpoint = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].spotifyApi.host + `artists/${id}`;
+    getArtistProfile(artistId) {
+        const endpoint = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].spotifyApi.host + `artists/${artistId}`;
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
                 Authorization: `Bearer ${this.accessToken}`,

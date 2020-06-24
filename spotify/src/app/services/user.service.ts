@@ -11,7 +11,6 @@ export class UserService {
   private accessToken: string;
   private loggedIn: boolean;
   private userProfile: UserProfile;
-  private artistId: string;
 
   constructor(private http: HttpClient) {}
 
@@ -85,9 +84,8 @@ export class UserService {
   }
 
   // Get Artist Profile
-  public getArtistProfile(): Observable<any> {
-    const id = this.artistId;
-    const endpoint = environment.spotifyApi.host + `artists/${id}`;
+  public getArtistProfile(artistId: string): Observable<any> {
+    const endpoint = environment.spotifyApi.host + `artists/${artistId}`;
 
     const httpOptions = {
       headers: new HttpHeaders({

@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { UserService } from "../services/user.service";
-import { Router } from "@angular/router";
-
+import { Router, ActivatedRoute } from "@angular/router";
+import { map } from "rxjs/operators";
 @Component({
   selector: "app-artist-profile",
   templateUrl: "./artist-profile.component.html",
@@ -9,18 +9,21 @@ import { Router } from "@angular/router";
 })
 export class ArtistProfileComponent implements OnInit {
   private artist_name: string;
+  id: string;
+  artist: [];
 
-  constructor(private router: Router, private userService: UserService) {}
+  constructor(
+    private router: Router,
+    private userService: UserService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
-    this.getArtist();
-  }
-
-  getArtist() {
-    let observable = this.userService.getArtistProfile();
-    observable.subscribe((data) => {
-      this.artist_name = data.artists;
-      console.log(this.artist_name);
+    this.route.params.pipe(map((params) => params["id"])).subscribe((id) => {
+      this.userService.getArtistProfile(id).subscribe((artist) => {
+        this.artist = artist;
+        console.log(this.artist);
+      });
     });
   }
 }
