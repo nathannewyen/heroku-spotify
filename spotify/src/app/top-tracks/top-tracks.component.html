@@ -24,12 +24,12 @@
             <div class="song d-inline-block">
               <div class="image d-inline-block">
                 <img src="{{track.album.images[1].url}}" alt="test">
-                <a class="image-link" href="{{ track.external_urls.spotify }}">
+                <a class="image-link" [routerLink]="['/tracks', track.id]">
                   <span class="fas fa-info-circle"></span>
                 </a>
               </div>
               <div class="artist-info">
-                <a class="track-link text-light" href="{{ track.external_urls.spotify }}">
+                <a class="track-link text-light" [routerLink]="['/tracks', track.id]">
                   <span class="song">{{ track.name }}</span>
                 </a>
                 <br>

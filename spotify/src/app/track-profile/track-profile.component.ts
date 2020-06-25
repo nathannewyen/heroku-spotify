@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { UserService } from "../services/user.service";
 import { Router, ActivatedRoute } from "@angular/router";
 import { map } from "rxjs/operators";
+import { NOTATIONS } from "../definitions/notation";
 
 @Component({
   selector: "app-track-profile",
@@ -13,6 +14,7 @@ export class TrackProfileComponent implements OnInit {
   track: [];
   trackAudio: [];
   trackFeature: [];
+  notations = NOTATIONS;
 
   constructor(
     private router: Router,
@@ -30,14 +32,12 @@ export class TrackProfileComponent implements OnInit {
     this.route.params.pipe(map((params) => params["id"])).subscribe((id) => {
       this.userService.getAudioAnalysis(id).subscribe((trackAudio) => {
         this.trackAudio = trackAudio;
-        console.log(this.trackAudio);
       });
     });
 
     this.route.params.pipe(map((params) => params["id"])).subscribe((id) => {
       this.userService.getAudioFeature(id).subscribe((trackFeature) => {
         this.trackFeature = trackFeature;
-        console.log(this.trackFeature);
       });
     });
   }

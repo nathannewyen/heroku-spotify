@@ -14,29 +14,57 @@
       <button class="btn text-light btn-play" type="submit">Play on spotify</button>
     </div>
 
-    <table class="table table-borderless">
+    <table class="table table-borderless text-center">
       <thead>
-        <tr>
+        <tr *ngIf="trackFeature">
           <th>
-            <div class="duration">
+            <div class="main">
               {{ track.duration_ms | date: "m:ss" }}
             </div>
-            <div class="dura">Duration</div>
+            <div class="sub">Duration</div>
           </th>
-          <th>First Name</th>
-          <th>Last Name</th>
+          <th>
+            <div class="main">{{notations[trackFeature.key] || 'Key unavailable'}}</div>
+            <div class="sub">Key</div>
+          </th>
+          <th>
+            <div class="main" *ngIf="trackFeature.mode == 1">Major</div>
+            <div class="main" *ngIf="trackFeature.mode != 1">Minor</div>
+            <div class="sub">Modality</div>
+          </th>
+          <th>
+            <div class="main">{{trackFeature.time_signature}}</div>
+            <div class="sub">Time Signature</div>
+          </th>
+          <th>
+            <div class="main">{{trackFeature.tempo | number : '1.0-0'}}</div>
+            <div class="sub">Tempo (BPM)</div>
+          </th>
+
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
+        <tr *ngIf="trackAudio">
+          <td>
+            <div class="main">{{track.popularity}}%</div>
+            <div class="sub">Popularity</div>
+          </td>
+          <td>
+            <div class="main">{{trackAudio.bars.length}}</div>
+            <div class="sub">Bars</div>
+          </td>
+          <td>
+            <div class="main">{{trackAudio.beats.length}}</div>
+            <div class="sub">Beats</div>
+          </td>
+          <td>
+            <div class="main">{{trackAudio.sections.length}}</div>
+            <div class="sub">Sections</div>
+          </td>
+          <td>
+            <div class="main">{{trackAudio.segments.length}}</div>
+            <div class="sub">Segments</div>
+          </td>
         </tr>
       </tbody>
     </table>

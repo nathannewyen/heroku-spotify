@@ -42,7 +42,7 @@ export class AppComponent {
 
     setTimeout(() => {
       this.spinner.hide();
-    }, 1000);
+    }, 2000);
 
     // End jQuery
 
