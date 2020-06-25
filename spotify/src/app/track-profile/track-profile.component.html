@@ -1,0 +1,45 @@
+<div class="container-fluid" *ngIf="track">
+  <div class="info">
+    <img class="shadow d-inline-block" src="{{ track.album.images[0].url }}" alt="track-profile" />
+    <div class="track-info d-inline-block">
+      <div class="track-name">
+        {{ track.name }}
+      </div>
+      <div class="track-artist" *ngFor="let info of track.artists">
+        {{ info.name }}
+      </div>
+      <div class="track-song">
+        {{ track.name }}・{{ track.album.release_date | date: "y" }}
+      </div>
+      <button class="btn text-light btn-play" type="submit">Play on spotify</button>
+    </div>
+
+    <table class="table table-borderless">
+      <thead>
+        <tr>
+          <th>
+            <div class="duration">
+              {{ track.duration_ms | date: "m:ss" }}
+            </div>
+            <div class="dura">Duration</div>
+          </th>
+          <th>First Name</th>
+          <th>Last Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

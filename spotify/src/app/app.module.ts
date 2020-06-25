@@ -11,7 +11,11 @@ import { RecentsComponent } from "./recents/recents.component";
 import { PlaylistsComponent } from "./playlists/playlists.component";
 import { UserComponent } from "./user/user.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
-import { ArtistProfileComponent } from './artist-profile/artist-profile.component';
+import { ArtistProfileComponent } from "./artist-profile/artist-profile.component";
+import { NgxSpinnerModule } from "ngx-spinner";
+
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { TrackProfileComponent } from './track-profile/track-profile.component';
 
 @NgModule({
   declarations: [
@@ -23,13 +27,16 @@ import { ArtistProfileComponent } from './artist-profile/artist-profile.componen
     PlaylistsComponent,
     UserComponent,
     ArtistProfileComponent,
+    TrackProfileComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    NgxSpinnerModule,
     FontAwesomeModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -26,7 +26,7 @@ app.get('/login', (req, res) => {
         querystring.stringify({
             response_type: 'code',
             client_id: process.env.SPOTIFY_CLIENT_ID,
-            scope: 'user-read-recently-played user-read-private user-read-email user-top-read playlist-modify-public playlist-modify-private playlist-read-private playlist-read-collaborative user-follow-read',
+            scope: 'user-read-recently-played user-read-private user-read-email user-top-read playlist-modify-public playlist-modify-private playlist-read-private playlist-read-collaborative user-follow-read user-follow-modify',
             redirect_uri: process.env.REDIRECT_URI
         }));
 });

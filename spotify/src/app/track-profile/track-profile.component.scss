@@ -1,0 +1,61 @@
+@media (min-width: 1700px) {
+  .container-fluid {
+    min-height: 100vh;
+    padding: 100px !important;
+    margin-left: 6vw;
+    width: 80%;
+
+    img {
+      width: 250px;
+      height: 250px;
+    }
+
+    .track-info {
+      margin-left: 20px;
+      vertical-align: top;
+
+      .track-name {
+        font-size: 42px;
+        font-weight: 900;
+      }
+
+      .track-artist {
+        font-size: 24px;
+        font-weight: 700;
+        color: #b3b3b3;
+      }
+
+      .track-song {
+        font-size: 16px;
+        font-weight: 400;
+        color: #b3b3b3;
+      }
+
+      .btn-play {
+        padding: 10px 20px;
+        border-radius: 50px;
+        background-color: #1ab954;
+        font-weight: 700;
+        margin-top: 30px;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+
+    table {
+      margin-top: 60px;
+      color: #b3b3b3;
+      border: 0.2px solid #404040 !important;
+
+      th {
+        border: 0.2px solid #404040 !important;
+        padding: 20px;
+      }
+
+      td {
+        border: 0.2px solid #404040 !important;
+      }
+    }
+  }
+}

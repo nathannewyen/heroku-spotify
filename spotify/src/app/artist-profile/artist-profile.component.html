@@ -1,19 +1,19 @@
 <div class="container-fluid text-center" *ngIf="artist">
   <div class="info">
-    <img src="{{artist.images[1].url}}" alt="profile">
-    <h2>{{artist.name}}</h2>
+    <img src="{{ artist.images[1].url }}" alt="profile" />
+    <h2>{{ artist.name }}</h2>
     <ul class="list-inline">
       <li class="list-inline-item follower">
         <h5>Followers</h5>
-        <p>{{artist.followers.total}}</p>
+        <p>{{ artist.followers.total | number }}</p>
       </li>
       <li class="list-inline-item gen">
         <h5>Genres</h5>
-        <p *ngFor="let gen of artist.genres">{{gen}}</p>
+        <div class="gens" *ngFor="let gen of artist.genres">{{ gen }}</div>
       </li>
       <li class="list-inline-item popular">
         <h5>Popularity</h5>
-        <p>{{artist.popularity}}%</p>
+        <p>{{ artist.popularity }}%</p>
       </li>
     </ul>
   </div>

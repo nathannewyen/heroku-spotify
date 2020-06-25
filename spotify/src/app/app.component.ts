@@ -4,6 +4,7 @@ import { ActivatedRoute, Router, NavigationEnd } from "@angular/router";
 import { UserService } from "./services/user.service";
 import { TracksService } from "./services/tracks.service";
 import { ArtistsService } from "./services/artists.service";
+import { NgxSpinnerService } from "ngx-spinner";
 
 declare var $: any;
 
@@ -20,7 +21,8 @@ export class AppComponent {
     private location: Location,
     private userService: UserService,
     private tracksService: TracksService,
-    private artistsService: ArtistsService
+    private artistsService: ArtistsService,
+    private spinner: NgxSpinnerService
   ) {}
 
   ngOnInit() {
@@ -28,11 +30,19 @@ export class AppComponent {
     const accessToken = localStorage.getItem(itemId);
 
     // jQuery
+    $("#content").hide();
+
     $(".nav-item").click(function () {
       $(".nav-item").removeClass("active");
       $(".nav-item").addClass("next");
       $(this).addClass("active");
     });
+
+    this.spinner.show();
+
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 1000);
 
     // End jQuery
 

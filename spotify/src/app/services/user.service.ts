@@ -96,6 +96,45 @@ export class UserService {
     return this.http.get(endpoint, httpOptions);
   }
 
+  // Get Track Profile
+  public getTrackProfile(trackId: string): Observable<any> {
+    const endpoint = environment.spotifyApi.host + `tracks/${trackId}`;
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${this.accessToken}`,
+      }),
+    };
+
+    return this.http.get(endpoint, httpOptions);
+  }
+
+  // Get Track Audio Analysis
+  public getAudioAnalysis(trackId: string): Observable<any> {
+    const endpoint = environment.spotifyApi.host + `audio-analysis/${trackId}`;
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${this.accessToken}`,
+      }),
+    };
+
+    return this.http.get(endpoint, httpOptions);
+  }
+
+  // Get Track Audio Feature
+  public getAudioFeature(trackId: string): Observable<any> {
+    const endpoint = environment.spotifyApi.host + `audio-features/${trackId}`;
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${this.accessToken}`,
+      }),
+    };
+
+    return this.http.get(endpoint, httpOptions);
+  }
+
   public getAccessToken(): string {
     return this.accessToken;
   }

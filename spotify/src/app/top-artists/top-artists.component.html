@@ -21,12 +21,12 @@
         <ul>
           <li *ngFor="let artists of topArtistsLongTerm; let index = index" class="item">
             <div class="image">
-              <img src="{{artists.images[1].url}}" alt="test">
-              <a href="{{ artists.external_urls.spotify }}" target="_blank">
+              <img src="{{artists.images[1].url}}" alt="profile">
+              <a [routerLink]="['/artists', artists.id]">
                 <span class="fas fa-info-circle"></span>
               </a>
             </div>
-            <p> <a href="{{ artists.external_urls.spotify }}" target="_blank">{{artists.name }}</a>
+            <p> <a [routerLink]="['/artists', artists.id]">{{artists.name }}</a>
             </p>
           </li>
         </ul>
@@ -36,9 +36,13 @@
       <div *ngIf="selectedTerm === 1" class="four-weeks">
         <ul>
           <li *ngFor="let artists of topArtistsShortTerm">
-            <a href="{{ artists.external_urls.spotify }}" target="_blank"><img src="{{artists.images[1].url}}"
-                alt="test"></a>
-            <p> <a href="{{ artists.external_urls.spotify }}" target="_blank">{{artists.name }}</a>
+            <div class="image">
+              <img src="{{artists.images[1].url}}" alt="profile">
+              <a [routerLink]="['/artists', artists.id]">
+                <span class="fas fa-info-circle"></span>
+              </a>
+            </div>
+            <p> <a [routerLink]="['/artists', artists.id]">{{artists.name }}</a>
             </p>
           </li>
         </ul>
@@ -47,9 +51,13 @@
       <div *ngIf="selectedTerm === 2" class="six-months">
         <ul class="list list--orange">
           <li *ngFor="let artists of topArtistsMediumTerm">
-            <a href="{{ artists.external_urls.spotify }}" target="_blank" class="list__link"><img
-                src="{{artists.images[1].url}}" alt="test"></a>
-            <p> <a href="{{ artists.external_urls.spotify }}" target="_blank" class="list__link">{{artists.name }}</a>
+            <div class="image">
+              <img src="{{artists.images[1].url}}" alt="profile">
+              <a [routerLink]="['/artists', artists.id]">
+                <span class="fas fa-info-circle"></span>
+              </a>
+            </div>
+            <p> <a [routerLink]="['/artists', artists.id]">{{artists.name }}</a>
             </p>
           </li>
         </ul>
