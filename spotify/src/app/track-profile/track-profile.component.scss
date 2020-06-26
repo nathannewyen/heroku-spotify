@@ -41,6 +41,12 @@
         text-transform: uppercase;
         letter-spacing: 1px;
       }
+
+      .btn-play:hover {
+        background-color: #1bd760;
+        transition-timing-function: ease-in;
+        transition: 0.3s;
+      }
     }
 
     table {
@@ -70,8 +76,12 @@
 
     .chart-wrapper {
       width: 700px;
-      height: 1400px !important;
       margin: 10px auto;
+
+      h4 {
+        padding: 20px;
+        font-size: 16px;
+      }
     }
   }
 }

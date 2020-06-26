@@ -1,10 +1,6 @@
 <div class="container-fluid" *ngIf="track">
   <div class="info">
-    <img
-      class="shadow d-inline-block"
-      src="{{ track.album.images[0].url }}"
-      alt="track-profile"
-    />
+    <img class="shadow d-inline-block" src="{{ track.album.images[0].url }}" alt="track-profile" />
     <div class="track-info d-inline-block">
       <div class="track-name">
         {{ track.name }}
@@ -15,9 +11,11 @@
       <div class="track-song">
         {{ track.name }}・{{ track.album.release_date | date: "y" }}
       </div>
-      <button class="btn text-light btn-play" type="submit">
-        Play on spotify
-      </button>
+      <a href="{{track.external_urls.spotify}}" target="_blank">
+        <button class="btn text-light btn-play" type="submit">
+          Play on spotify
+        </button>
+      </a>
     </div>
 
     <table class="table table-borderless text-center">
@@ -77,18 +75,19 @@
     </table>
 
     <div class="chart-wrapper">
-      <canvas
-        class="chart-canvas"
-        baseChart
-        [datasets]="barChartData"
-        [labels]="barChartLabels"
-        [options]="barChartOptions"
-        [plugins]="barChartPlugins"
-        [legend]="barChartLegend"
-        [chartType]="barChartType"
-        [colors]="barChartColors"
-      >
+      <div class="title text-center">
+        <h4>Audio Features</h4>
+      </div>
+      <canvas class="chart-canvas" baseChart [datasets]="barChartData" [labels]="barChartLabels"
+        [options]="barChartOptions" [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType"
+        [colors]="barChartColors">
       </canvas>
     </div>
+
+    <div class="link text-center">
+      <a href="https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/" target="_blank"
+        class="text-light">Full Description of Audio Features</a>
+    </div>
+
   </div>
 </div>

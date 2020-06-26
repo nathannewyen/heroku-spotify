@@ -135,6 +135,19 @@ export class UserService {
     return this.http.get(endpoint, httpOptions);
   }
 
+  // Get Playlist Profile
+  public getPlaylistProfile(playlistId: string): Observable<any> {
+    const endpoint = environment.spotifyApi.host + `playlists/${playlistId}`;
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${this.accessToken}`,
+      }),
+    };
+
+    return this.http.get(endpoint, httpOptions);
+  }
+
   public getAccessToken(): string {
     return this.accessToken;
   }

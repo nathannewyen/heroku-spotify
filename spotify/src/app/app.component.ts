@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { Location } from "@angular/common";
-import { ActivatedRoute, Router, NavigationEnd } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { UserService } from "./services/user.service";
 import { TracksService } from "./services/tracks.service";
 import { ArtistsService } from "./services/artists.service";
@@ -37,7 +37,7 @@ export class AppComponent {
     setTimeout(() => {
       this.spinner.hide();
       this.visible = true;
-    }, 3000);
+    }, 1500);
 
     $(".nav-item").click(function () {
       $(".nav-item").removeClass("active");

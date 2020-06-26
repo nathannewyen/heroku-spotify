@@ -1,0 +1,47 @@
+<div class="container-fluid" *ngIf="playlist">
+  <div class="playlist-profile row">
+    <!-- Left -->
+    <div class="left col-5 text-center">
+      <img src="{{playlist.images[0].url}}" alt="playlist-image">
+      <div class="name text-center">
+        {{playlist.name}}
+      </div>
+      <div class="owner">
+        By {{playlist.owner.display_name}}
+      </div>
+      <div class="description" [innerHTML]="playlist.description"></div>
+      <div class="track-total">
+        {{playlist.tracks.total}} Tracks
+      </div>
+      <div class="recommend">
+        <button type="submit" class="btn btn-recommend text-light">
+          Get Recommendations
+        </button>
+      </div>
+    </div>
+    <!-- End left -->
+
+    <!-- Right -->
+    <div class="right col-7">
+      <ul *ngFor="let song of playlist.tracks.items">
+        <li>
+          <div class="image d-inline-block">
+            <img src="{{song.track.album.images[2].url}}" alt="{{song.track.name}}" class="d-inline-block">
+            <a class="track-link text-light" [routerLink]="['/tracks', song.track.id]">
+              <span class="fas fa-info-circle"></span>
+            </a>
+          </div>
+          <div class="info d-inline-block">
+            <span class="song">{{ song.track.name }}</span>
+            <br>
+            <span class="artist-name text-secondary">
+              {{ song.track.artists[0].name }}・{{ song.track.name }}
+            </span>
+          </div>
+          <p class="d-inline-block time text-secondary float-right">{{song.track.duration_ms | date:'m:ss'}}</p>
+        </li>
+      </ul>
+    </div>
+    <!-- End right -->
+  </div>
+</div>

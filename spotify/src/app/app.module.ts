@@ -18,6 +18,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { TrackProfileComponent } from "./track-profile/track-profile.component";
 
 import { ChartsModule } from "ng2-charts";
+import { PlaylistProfileComponent } from './playlist-profile/playlist-profile.component';
+import { RecommendComponent } from './recommend/recommend.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { ChartsModule } from "ng2-charts";
     UserComponent,
     ArtistProfileComponent,
     TrackProfileComponent,
+    PlaylistProfileComponent,
+    RecommendComponent,
   ],
   imports: [
     BrowserModule,

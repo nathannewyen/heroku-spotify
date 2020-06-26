@@ -7,6 +7,7 @@ import { TopTracksComponent } from "./top-tracks/top-tracks.component";
 import { RecentsComponent } from "./recents/recents.component";
 import { ArtistProfileComponent } from "./artist-profile/artist-profile.component";
 import { TrackProfileComponent } from "./track-profile/track-profile.component";
+import { PlaylistProfileComponent } from "./playlist-profile/playlist-profile.component";
 
 const routes: Routes = [
   { path: "", component: IndexComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: "recent", component: RecentsComponent },
   { path: "artists/:id", component: ArtistProfileComponent },
   { path: "tracks/:id", component: TrackProfileComponent },
+  { path: "playlists/:id", component: PlaylistProfileComponent },
 ];
 
 @NgModule({

@@ -6,7 +6,7 @@
       <li>
         <div class="image d-inline-block">
           <img src="{{recent.track.album.images[2].url}}" alt="{{recent.track.name}}" class="d-inline-block">
-          <a class="track-link text-light" href="{{ recent.track.external_urls.spotify }}">
+          <a class="track-link text-light" [routerLink]="['/tracks', recent.track.id]">
             <span class="fas fa-info-circle"></span>
           </a>
         </div>
