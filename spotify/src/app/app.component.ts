@@ -15,6 +15,8 @@ declare var $: any;
 })
 export class AppComponent {
   title = "spotify";
+  visible = false;
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -30,20 +32,18 @@ export class AppComponent {
     const accessToken = localStorage.getItem(itemId);
 
     // jQuery
-    $("#content").hide();
+    this.spinner.show();
+
+    setTimeout(() => {
+      this.spinner.hide();
+      this.visible = true;
+    }, 3000);
 
     $(".nav-item").click(function () {
       $(".nav-item").removeClass("active");
       $(".nav-item").addClass("next");
       $(this).addClass("active");
     });
-
-    this.spinner.show();
-
-    setTimeout(() => {
-      this.spinner.hide();
-    }, 2000);
-
     // End jQuery
 
     if (accessToken) {

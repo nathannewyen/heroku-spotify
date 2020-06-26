@@ -13,9 +13,11 @@ import { UserComponent } from "./user/user.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { ArtistProfileComponent } from "./artist-profile/artist-profile.component";
 import { NgxSpinnerModule } from "ngx-spinner";
-
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { TrackProfileComponent } from './track-profile/track-profile.component';
+
+import { TrackProfileComponent } from "./track-profile/track-profile.component";
+
+import { ChartsModule } from "ng2-charts";
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { TrackProfileComponent } from './track-profile/track-profile.component';
     FormsModule,
     NgxSpinnerModule,
     FontAwesomeModule,
+    ChartsModule,
     BrowserAnimationsModule,
   ],
   providers: [],

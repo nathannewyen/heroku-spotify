@@ -1,6 +1,10 @@
 <div class="container-fluid" *ngIf="track">
   <div class="info">
-    <img class="shadow d-inline-block" src="{{ track.album.images[0].url }}" alt="track-profile" />
+    <img
+      class="shadow d-inline-block"
+      src="{{ track.album.images[0].url }}"
+      alt="track-profile"
+    />
     <div class="track-info d-inline-block">
       <div class="track-name">
         {{ track.name }}
@@ -11,7 +15,9 @@
       <div class="track-song">
         {{ track.name }}・{{ track.album.release_date | date: "y" }}
       </div>
-      <button class="btn text-light btn-play" type="submit">Play on spotify</button>
+      <button class="btn text-light btn-play" type="submit">
+        Play on spotify
+      </button>
     </div>
 
     <table class="table table-borderless text-center">
@@ -24,7 +30,9 @@
             <div class="sub">Duration</div>
           </th>
           <th>
-            <div class="main">{{notations[trackFeature.key] || 'Key unavailable'}}</div>
+            <div class="main">
+              {{ notations[trackFeature.key] || "Key unavailable" }}
+            </div>
             <div class="sub">Key</div>
           </th>
           <th>
@@ -33,41 +41,54 @@
             <div class="sub">Modality</div>
           </th>
           <th>
-            <div class="main">{{trackFeature.time_signature}}</div>
+            <div class="main">{{ trackFeature.time_signature }}</div>
             <div class="sub">Time Signature</div>
           </th>
           <th>
-            <div class="main">{{trackFeature.tempo | number : '1.0-0'}}</div>
+            <div class="main">{{ trackFeature.tempo | number: "1.0-0" }}</div>
             <div class="sub">Tempo (BPM)</div>
           </th>
-
         </tr>
       </thead>
       <tbody>
         <tr *ngIf="trackAudio">
           <td>
-            <div class="main">{{track.popularity}}%</div>
+            <div class="main">{{ track.popularity }}%</div>
             <div class="sub">Popularity</div>
           </td>
           <td>
-            <div class="main">{{trackAudio.bars.length}}</div>
+            <div class="main">{{ trackAudio.bars.length }}</div>
             <div class="sub">Bars</div>
           </td>
           <td>
-            <div class="main">{{trackAudio.beats.length}}</div>
+            <div class="main">{{ trackAudio.beats.length }}</div>
             <div class="sub">Beats</div>
           </td>
           <td>
-            <div class="main">{{trackAudio.sections.length}}</div>
+            <div class="main">{{ trackAudio.sections.length }}</div>
             <div class="sub">Sections</div>
           </td>
           <td>
-            <div class="main">{{trackAudio.segments.length}}</div>
+            <div class="main">{{ trackAudio.segments.length }}</div>
             <div class="sub">Segments</div>
           </td>
         </tr>
       </tbody>
     </table>
 
+    <div class="chart-wrapper">
+      <canvas
+        class="chart-canvas"
+        baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        [chartType]="barChartType"
+        [colors]="barChartColors"
+      >
+      </canvas>
+    </div>
   </div>
 </div>
