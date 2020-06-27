@@ -53,3 +53,60 @@
   }
 
 }
+
+// iPad Pro
+@media (max-width: 1024px) {
+  #profile {
+
+    img {
+      width: 150px;
+      border-radius: 75px;
+      margin-top: 80px;
+    }
+
+    i {
+      border: 2px solid white;
+      border-radius: 80px;
+      margin-top: 80px;
+      font-size: 80px;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 50px;
+      font-weight: 700;
+      margin-top: 20px;
+    }
+
+    ul {
+      margin-top: 20px;
+
+      li {
+        margin: 0px 15px;
+
+        h5 {
+          color: #1db954;
+          font-size: 20px;
+          font-weight: 700;
+        }
+
+        p {
+          text-transform: uppercase;
+          font-size: 12px;
+          color: #9b9b9b;
+          letter-spacing: 1.5px;
+          font-weight: 300;
+        }
+      }
+    }
+
+    button {
+      font-size: 12px;
+      margin-top: 5px;
+      font-weight: 700;
+      padding: 10px 30px;
+      border-radius: 30px;
+    }
+  }
+
+}

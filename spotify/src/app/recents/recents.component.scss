@@ -181,3 +181,94 @@
     }
   }
 }
+
+// iPad Pro
+@media (max-width: 1024px) {
+  .recent {
+    min-height: 100vh;
+    padding: 100px;
+    width: 90%;
+    margin: 0 auto;
+
+    h4 {
+      margin-left: 50px;
+      margin-bottom: 40px;
+    }
+
+    img {
+      width: 50px;
+    }
+
+    .recent-song {
+      ul {
+        li {
+          list-style: none;
+          padding: 8px 10px;
+
+          // Hover image
+
+          .image {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: middle;
+
+            span {
+              font-size: 24px;
+            }
+          }
+
+          .image:hover {
+            img {
+              opacity: 0.5;
+              transition-timing-function: ease-in;
+              transition: 0.4s;
+            }
+          }
+
+          .image:hover a {
+            opacity: 1;
+            top: 0;
+            z-index: 500;
+          }
+
+          .image:hover a span {
+            top: 50%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+          }
+
+          .image a {
+            display: block;
+            position: absolute;
+            top: 100%;
+            opacity: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            text-align: center;
+            color: inherit;
+          }
+
+          // End hover
+
+          .info {
+            vertical-align: middle;
+            margin-left: 20px;
+            font-size: 16px;
+
+            .artist-name {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    .time {
+      font-size: 14px;
+    }
+  }
+}

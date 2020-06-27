@@ -273,3 +273,91 @@
     }
   }
 }
+
+// iPad Pro
+@media (max-width: 1024px) {
+  #content {
+    vertical-align: top;
+    background-color: #191919;
+    color: white;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  #navbar {
+    background-color: black;
+    min-height: 100vh;
+    width: 100px !important;
+    position: fixed;
+
+    nav {
+      margin-top: 30px;
+    }
+
+    ul {
+      margin-top: 300px;
+
+      li {
+        padding-top: 10px;
+        margin-top: 0px;
+      }
+    }
+
+    a {
+      i {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 11px;
+      }
+
+      color: #9b9b9b;
+    }
+
+    li:hover {
+      background-color: #191919;
+      border-left: 3px solid #1bd760;
+      transition-timing-function: ease-in;
+      transition: 0.3s;
+
+      a {
+        color: white;
+      }
+    }
+
+    // Active li
+    .active {
+      background-color: #191919;
+      border-left: 3px solid #1bd760;
+      transition-timing-function: ease-in;
+      transition: 0.5s;
+
+      a {
+        color: white;
+      }
+    }
+
+    // End active
+
+    img {
+      width: 50px;
+    }
+
+    .bottom {
+      margin-top: 450px;
+
+      i {
+        font-size: 30px;
+      }
+    }
+
+    .bottom:hover {
+      a {
+        color: #519bf5;
+        transition-timing-function: ease-in;
+        transition: 0.3s;
+      }
+    }
+  }
+}
