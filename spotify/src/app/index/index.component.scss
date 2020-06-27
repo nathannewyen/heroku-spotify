@@ -284,7 +284,7 @@ a {
   }
 }
 
-// Macbook 13 - 15
+// Macbook 15
 @media (min-width: 1300px) {
 
   // Profile
@@ -472,6 +472,286 @@ a {
             font-size: 19px;
             font-weight: 900;
             width: 300px;
+            margin-left: 40px;
+          }
+
+          ul {
+            margin-top: 30px;
+
+            li {
+              list-style: none;
+              min-width: 430px;
+              margin-top: 30px;
+
+              // Hover image
+
+              .image {
+                position: relative;
+                display: inline-block;
+                overflow: hidden;
+                vertical-align: middle;
+
+                span {
+                  font-size: 24px;
+                }
+              }
+
+              .image:hover {
+                img {
+                  opacity: 0.5;
+                  transition-timing-function: ease-in;
+                  transition: 0.4s;
+                }
+              }
+
+              .image:hover a {
+                opacity: 1;
+                top: 0;
+                z-index: 500;
+              }
+
+              .image:hover a span {
+                top: 50%;
+                position: absolute;
+                left: 0;
+                right: 0;
+                transform: translateY(-50%);
+              }
+
+              .image a {
+                display: block;
+                position: absolute;
+                top: 100%;
+                opacity: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                text-align: center;
+                color: inherit;
+              }
+
+              // End hover
+
+              img {
+                width: 50px;
+                height: 50px;
+                display: inline-block;
+              }
+
+              .artist-info {
+                display: inline-block;
+                vertical-align: middle;
+
+                span {
+                  margin-left: 10px;
+                }
+
+                .song {
+                  font-size: 14px;
+                }
+
+                .artist-name {
+                  font-size: 14px;
+                  color: #9b9b9b;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Macbook 13
+@media (min-width: 1025px) {
+
+  // Profile
+  .login {
+    height: 100vh;
+    background-color: white;
+    padding: 10px;
+    color: black;
+
+    img {
+      width: 250px;
+      height: 100px;
+    }
+
+    .btn-login {
+      padding: 10px 180px;
+      border-radius: 50px;
+      background-color: #1ab954;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .btn-login:hover {
+      background-color: #1bd760;
+      transition-timing-function: ease-in;
+      transition: 0.3s;
+    }
+
+    .btn-register {
+      padding: 10px 160px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+
+      a {
+        color: #616467;
+        font-size: 14px;
+      }
+    }
+
+    .btn-register:hover {
+      transition-timing-function: ease-in;
+      transition: 0.3s;
+
+      a {
+        color: white;
+      }
+    }
+
+    .or-line {
+      margin-top: 10px;
+    }
+
+    .or {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      display: inline-block;
+    }
+
+    .line {
+      display: inline-block;
+      width: 180px;
+      height: 1px;
+      vertical-align: middle;
+      margin: 0 20px;
+    }
+  }
+
+  // Content
+  .container-fluid {
+    margin-top: 100px;
+    padding: 0px 100px;
+    min-height: 40vh;
+
+    // Left Panel
+
+    .artists {
+      .left-panel {
+        padding: 20px 10px;
+
+        .top-artists {
+          h5 {
+            font-size: 16px;
+            width: 200px;
+            font-weight: 900;
+            margin-left: 40px;
+          }
+
+          ul {
+            margin-top: 30px;
+
+            li {
+              list-style: none;
+              margin-top: 30px;
+              width: 200px;
+
+              // Hover image
+
+              .image {
+                position: relative;
+                display: inline-block;
+                overflow: hidden;
+                vertical-align: middle;
+
+                span {
+                  font-size: 24px;
+                }
+              }
+
+              .image:hover {
+                img {
+                  opacity: 0.5;
+                  transition-timing-function: ease-in;
+                  transition: 0.4s;
+                }
+              }
+
+              .image:hover a {
+                opacity: 1;
+                top: 0;
+                z-index: 500;
+              }
+
+              .image:hover a span {
+                top: 50%;
+                position: absolute;
+                left: -20px;
+                right: 0;
+                transform: translateY(-50%);
+              }
+
+              .image a {
+                display: block;
+                position: absolute;
+                top: 100%;
+                opacity: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                text-align: center;
+                color: inherit;
+              }
+
+              // End hover
+
+
+              img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50px;
+              }
+
+              span {
+                margin-left: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .see-more {
+      button {
+        font-size: 12px;
+        font-weight: 700;
+        display: inline-block;
+        padding: 10px 30px;
+        border-radius: 30px;
+      }
+    }
+
+    // Right Panel
+    .tracks {
+      .right-panel {
+        padding: 20px 0px;
+
+        .top-tracks {
+          h5 {
+            vertical-align: middle;
+            font-size: 16px;
+            width: 200px;
+            font-weight: 900;
             margin-left: 40px;
           }
 

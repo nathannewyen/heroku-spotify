@@ -6,7 +6,7 @@
     </a>
     <div class="track">
       <span>
-        <a href="{{playlist.external_urls.spotify}}" class="text-light">{{playlist.name}}</a>
+        <a [routerLink]="['/playlists', playlist.id]" class="text-light">{{playlist.name}}</a>
       </span>
       <br>
       <span class="total text-secondary">{{playlist.tracks.total}} TRACKS</span>

@@ -43,7 +43,7 @@ export class TrackProfileComponent implements OnInit {
         "rgba(255, 159, 64, 1)",
         "	rgba(0, 250, 154, 1)",
       ],
-      borderWidth: 2,
+      borderWidth: 1,
     },
   ];
 

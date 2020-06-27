@@ -18,6 +18,16 @@
           Get Recommendations
         </button>
       </div>
+
+      <div class="chart-wrapper">
+        <div class="title text-center">
+          <h4>Audio Features</h4>
+        </div>
+        <canvas class="chart-canvas" baseChart height="250px" [datasets]="barChartData" [labels]="barChartLabels"
+          [options]="barChartOptions" [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType"
+          [colors]="barChartColors">
+        </canvas>
+      </div>
     </div>
     <!-- End left -->
 

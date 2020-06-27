@@ -1,4 +1,4 @@
-@media (min-width: 1600px) {
+@media (min-width: 1300px) {
   .container-fluid {
     min-height: 100vh;
     padding: 100px !important;
@@ -21,6 +21,102 @@
 
       .track-artist {
         font-size: 24px;
+        font-weight: 700;
+        color: #b3b3b3;
+      }
+
+      .track-song {
+        font-size: 16px;
+        font-weight: 400;
+        color: #b3b3b3;
+      }
+
+      .btn-play {
+        padding: 10px 20px;
+        border-radius: 50px;
+        background-color: #1ab954;
+        font-weight: 700;
+        margin-top: 30px;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .btn-play:hover {
+        background-color: #1bd760;
+        transition-timing-function: ease-in;
+        transition: 0.3s;
+      }
+    }
+
+    table {
+      margin-top: 60px;
+      color: #b3b3b3;
+      border: 0.2px solid #404040 !important;
+
+      th {
+        border: 0.2px solid #404040 !important;
+        width: 20% !important;
+      }
+
+      td {
+        border: 0.2px solid #404040 !important;
+      }
+
+      .main {
+        font-size: 30px;
+        font-weight: 700;
+      }
+
+      .sub {
+        font-weight: 400;
+        font-size: 12px;
+      }
+    }
+
+    .chart-wrapper {
+      width: 700px;
+      margin: 10px auto;
+
+      h4 {
+        padding: 20px;
+        font-size: 16px;
+        font-weight: 900;
+      }
+    }
+
+    .link a {
+      color: #b3b3b3;
+    }
+  }
+}
+
+
+
+// Macbook 13
+@media (min-width: 1025px) {
+  .container-fluid {
+    min-height: 100vh;
+    padding: 100px !important;
+    margin-left: 8vw;
+    width: 90%;
+
+    img {
+      width: 250px;
+      height: 250px;
+    }
+
+    .track-info {
+      margin-left: 20px;
+      vertical-align: top;
+
+      .track-name {
+        font-size: 30px;
+        font-weight: 900;
+      }
+
+      .track-artist {
+        font-size: 20px;
         font-weight: 700;
         color: #b3b3b3;
       }

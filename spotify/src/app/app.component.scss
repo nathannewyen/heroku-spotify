@@ -14,7 +14,7 @@
 
   #navbar {
     background-color: black;
-    width: 4vw !important;
+    width: 100px !important;
     min-height: 100vh;
     position: fixed;
 
@@ -43,7 +43,7 @@
       color: #9b9b9b;
     }
 
-    a:hover {
+    li:hover {
       background-color: #191919;
       border-left: 4px solid #1bd760;
       transition-timing-function: ease-in;
@@ -97,7 +97,7 @@
   }
 }
 
-// Macbook 13 - 15
+// Macbook 15
 @media (min-width: 1300px) {
   #content {
     vertical-align: top;
@@ -109,7 +109,7 @@
 
   #navbar {
     background-color: black;
-    width: 8vw;
+    width: 100px !important;
     min-height: 100vh;
     position: fixed;
 
@@ -169,6 +169,95 @@
 
     .bottom {
       margin-top: 100px;
+
+      i {
+        font-size: 30px;
+      }
+    }
+
+    .bottom:hover {
+      a {
+        color: #519bf5;
+        transition-timing-function: ease-in;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+
+// Macbook 13
+@media (min-width: 1025px) {
+  #content {
+    vertical-align: top;
+    background-color: #191919;
+    color: white;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  #navbar {
+    background-color: black;
+    min-height: 100vh;
+    width: 100px !important;
+    position: fixed;
+
+    nav {
+      margin-top: 30px;
+    }
+
+    ul {
+      margin-top: 250px;
+
+      li {
+        padding-top: 10px;
+        margin-top: 0px;
+      }
+    }
+
+    a {
+      i {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 11px;
+      }
+
+      color: #9b9b9b;
+    }
+
+    li:hover {
+      background-color: #191919;
+      border-left: 3px solid #1bd760;
+      transition-timing-function: ease-in;
+      transition: 0.3s;
+
+      a {
+        color: white;
+      }
+    }
+
+    // Active li
+    .active {
+      background-color: #191919;
+      border-left: 3px solid #1bd760;
+      transition-timing-function: ease-in;
+      transition: 0.5s;
+
+      a {
+        color: white;
+      }
+    }
+
+    // End active
+
+    img {
+      width: 50px;
+    }
+
+    .bottom {
+      margin-top: 400px;
 
       i {
         font-size: 30px;

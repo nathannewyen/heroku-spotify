@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { UserProfile } from "../definitions/user-profile";
 import { environment } from "../../environments/environment";
+import { map } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root",
@@ -138,6 +139,19 @@ export class UserService {
   // Get Playlist Profile
   public getPlaylistProfile(playlistId: string): Observable<any> {
     const endpoint = environment.spotifyApi.host + `playlists/${playlistId}`;
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${this.accessToken}`,
+      }),
+    };
+
+    return this.http.get(endpoint, httpOptions);
+  }
+
+  // Get Several Tracks Audio Feature
+  public getSeveralTrackAudioFeatures(ids: Array<string>): Observable<any> {
+    const endpoint = environment.spotifyApi.host + `audio-features?ids=${ids}`;
 
     const httpOptions = {
       headers: new HttpHeaders({
