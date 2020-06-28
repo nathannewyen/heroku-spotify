@@ -368,7 +368,6 @@
   }
 
   #navbar {
-    width: 100vw;
 
     nav {
       background-color: black;
@@ -379,7 +378,7 @@
     }
 
     ul {
-      width: 90vw;
+      width: 100vw;
       display: inline-block;
 
       li {
@@ -426,26 +425,9 @@
 
     // End active
 
-    img {
-      width: 50px;
-    }
-
     .bottom {
-      margin-top: 5px;
-      display: inline-block;
-      vertical-align: top;
-
-      i {
-        font-size: 30px;
-      }
+      display: none;
     }
 
-    .bottom:hover {
-      a {
-        color: #519bf5;
-        transition-timing-function: ease-in;
-        transition: 0.3s;
-      }
-    }
   }
 }
