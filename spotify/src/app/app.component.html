@@ -1,10 +1,12 @@
 <div class="wrapper">
   <!-- Navbar -->
-  <div id="navbar" class="d-inline-block">
-    <nav class="text-center">
-      <a [routerLink]="['']">
-        <img src="https://image.flaticon.com/icons/svg/2111/2111624.svg" alt="logo" />
-      </a>
+  <div id="navbar">
+    <nav>
+      <div class="text-center">
+        <a [routerLink]="['']" class="nav-image">
+          <img src="https://image.flaticon.com/icons/svg/2111/2111624.svg" alt="logo" />
+        </a>
+      </div>
       <ul class="navbar-nav text-center">
         <li class="nav-item active">
           <a [routerLink]="['']" class="nav-link">
@@ -49,7 +51,7 @@
   <!-- Content -->
   <ngx-spinner bdColor="#191919" size="medium" color="#959595" type="line-scale" [fullScreen]="true">
   </ngx-spinner>
-  <div id="content" class="d-inline-block" *ngIf="visible">
+  <div id="content" *ngIf="visible">
     <router-outlet></router-outlet>
   </div>
 </div>

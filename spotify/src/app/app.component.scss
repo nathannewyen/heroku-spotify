@@ -9,7 +9,6 @@
     background-color: #191919;
     color: white;
     width: 100%;
-    min-height: 100vh;
   }
 
   #navbar {
@@ -104,7 +103,6 @@
     background-color: #191919;
     color: white;
     width: 100%;
-    min-height: 100vh;
   }
 
   #navbar {
@@ -118,7 +116,7 @@
     }
 
     ul {
-      margin-top: 140px;
+      margin-top: 140px !important;
 
       li {
         padding-top: 10px;
@@ -168,7 +166,7 @@
     }
 
     .bottom {
-      margin-top: 100px;
+      margin-top: 100px !important;
 
       i {
         font-size: 30px;
@@ -193,7 +191,6 @@
     background-color: #191919;
     color: white;
     width: 100%;
-    min-height: 100vh;
   }
 
   #navbar {
@@ -275,13 +272,12 @@
 }
 
 // iPad Pro
-@media (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   #content {
     vertical-align: top;
     background-color: #191919;
     color: white;
     width: 100%;
-    min-height: 100vh;
   }
 
   #navbar {
@@ -346,6 +342,98 @@
 
     .bottom {
       margin-top: 450px;
+
+      i {
+        font-size: 30px;
+      }
+    }
+
+    .bottom:hover {
+      a {
+        color: #519bf5;
+        transition-timing-function: ease-in;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+
+
+// iPad
+@media (max-width: 768px) {
+  #content {
+    background-color: #191919;
+    color: white;
+  }
+
+  #navbar {
+    width: 100vw;
+
+    nav {
+      background-color: black;
+
+      .nav-image {
+        display: none;
+      }
+    }
+
+    ul {
+      width: 90vw;
+      display: inline-block;
+
+      li {
+        display: inline-block;
+        width: 20%;
+      }
+    }
+
+    a {
+      i {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 11px;
+      }
+
+      color: #9b9b9b;
+    }
+
+
+    li:hover {
+      background-color: #191919;
+      border-top: 3px solid #1bd760;
+      transition-timing-function: ease-in;
+      transition: 0.3s;
+
+      a {
+        color: white;
+      }
+    }
+
+    // Active li
+    .active {
+      background-color: #191919;
+      border-top: 3px solid #1bd760;
+      transition-timing-function: ease-in;
+      transition: 0.5s;
+
+      a {
+        color: white;
+      }
+    }
+
+    // End active
+
+    img {
+      width: 50px;
+    }
+
+    .bottom {
+      margin-top: 5px;
+      display: inline-block;
+      vertical-align: top;
 
       i {
         font-size: 30px;
