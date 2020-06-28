@@ -6,6 +6,10 @@
     padding: 100px;
     margin: 0 auto;
 
+    .long {
+      float: right;
+    }
+
     h3 {
       margin-left: 100px;
       margin-bottom: 50px;
@@ -118,6 +122,11 @@
     padding: 100px;
     margin: 0 auto;
 
+    .long {
+      float: right;
+    }
+
+
     h3 {
       margin-left: 100px;
       margin-bottom: 50px;
@@ -223,11 +232,16 @@
 
 
 // iPad Pro
-@media (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .artists {
     min-height: 100vh;
     padding: 100px;
     margin: 0 auto;
+
+    .long {
+      float: right;
+    }
+
 
     h3 {
       margin-left: 100px;
@@ -330,4 +344,122 @@
 
   }
 
+}
+
+
+// iPad
+@media (max-width: 768px) {
+  .artists {
+    width: 99%;
+
+    h3 {
+      display: block !important;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .long {
+      display: block !important;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .btn {
+      margin: 0px 5px;
+      background-color: Transparent;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      overflow: hidden;
+      color: gray;
+    }
+
+    .btn:hover {
+      color: white;
+      transition-timing-function: ease-in;
+      transition: 0.3s;
+      text-decoration: underline;
+    }
+
+    .all-time,
+    .four-weeks,
+    .six-months {
+      min-height: 102%;
+    }
+
+
+    ul {
+
+      li {
+        list-style: none;
+        display: inline-block;
+        padding: 15px;
+
+        // Hover image
+
+        .image {
+          position: relative;
+          display: inline-block;
+          overflow: hidden;
+          vertical-align: middle;
+
+          span {
+            font-size: 30px;
+          }
+        }
+
+        .image:hover {
+          img {
+            opacity: 0.5;
+            transition-timing-function: ease-in;
+            transition: 0.4s;
+          }
+        }
+
+        .image:hover a {
+          opacity: 1;
+          top: 0;
+          z-index: 500;
+        }
+
+        .image:hover a span {
+          top: 50%;
+          position: absolute;
+          left: 0;
+          right: 0;
+          transform: translateY(-50%);
+        }
+
+        .image a {
+          display: block;
+          position: absolute;
+          top: 100%;
+          opacity: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          text-align: center;
+          color: inherit;
+        }
+
+        // End hover
+
+        img {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+        }
+
+        a {
+          color: white;
+        }
+
+
+
+        p {
+          padding: 10px;
+        }
+      }
+    }
+
+  }
 }

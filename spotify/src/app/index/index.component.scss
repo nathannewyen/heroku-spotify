@@ -845,7 +845,7 @@ a {
 
 
 // iPad Pro
-@media (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
 
   // Profile
   .login {
@@ -1044,6 +1044,289 @@ a {
               margin-top: 30px;
 
               // Hover image
+
+              .image {
+                position: relative;
+                display: inline-block;
+                overflow: hidden;
+                vertical-align: middle;
+
+                span {
+                  font-size: 24px;
+                }
+              }
+
+              .image:hover {
+                img {
+                  opacity: 0.5;
+                  transition-timing-function: ease-in;
+                  transition: 0.4s;
+                }
+              }
+
+              .image:hover a {
+                opacity: 1;
+                top: 0;
+                z-index: 500;
+              }
+
+              .image:hover a span {
+                top: 50%;
+                position: absolute;
+                left: 0;
+                right: 0;
+                transform: translateY(-50%);
+              }
+
+              .image a {
+                display: block;
+                position: absolute;
+                top: 100%;
+                opacity: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                text-align: center;
+                color: inherit;
+              }
+
+              // End hover
+
+              img {
+                width: 50px;
+                height: 50px;
+                display: inline-block;
+              }
+
+              .artist-info {
+                display: inline-block;
+                vertical-align: middle;
+
+                span {
+                  margin-left: 10px;
+                }
+
+                .song {
+                  font-size: 14px;
+                }
+
+                .artist-name {
+                  font-size: 14px;
+                  color: #9b9b9b;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// iPad 
+@media (max-width: 768px) {
+
+  // Profile
+  .login {
+    height: 100vh;
+    background-color: white;
+    padding: 10px;
+    color: black;
+
+    img {
+      width: 250px;
+      height: 100px;
+    }
+
+    .btn-login {
+      padding: 10px 180px;
+      border-radius: 50px;
+      background-color: #1ab954;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .btn-login:hover {
+      background-color: #1bd760;
+      transition-timing-function: ease-in;
+      transition: 0.3s;
+    }
+
+    .btn-register {
+      padding: 10px 160px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+
+      a {
+        color: #616467;
+        font-size: 14px;
+      }
+    }
+
+    .btn-register:hover {
+      transition-timing-function: ease-in;
+      transition: 0.3s;
+
+      a {
+        color: white;
+      }
+    }
+
+    .or-line {
+      margin-top: 10px;
+    }
+
+    .or {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      display: inline-block;
+    }
+
+    .line {
+      display: inline-block;
+      width: 180px;
+      height: 1px;
+      vertical-align: middle;
+      margin: 0 20px;
+    }
+  }
+
+  // Content
+
+  .container-fluid {
+    margin-top: 50px;
+
+
+    // Artist Left side
+    .artists {
+      .top-artists {
+
+        h5 {
+          font-size: 19px;
+          margin-left: 40px;
+          font-weight: 700;
+        }
+
+        ul {
+          margin-top: 30px;
+
+          li {
+            list-style: none;
+            margin-top: 30px;
+            width: 200px;
+
+            // Hover image
+
+            .image {
+              position: relative;
+              display: inline-block;
+              overflow: hidden;
+              vertical-align: middle;
+
+              span {
+                font-size: 24px;
+              }
+            }
+
+            .image:hover {
+              img {
+                opacity: 0.5;
+                transition-timing-function: ease-in;
+                transition: 0.4s;
+              }
+            }
+
+            .image:hover a {
+              opacity: 1;
+              top: 0;
+              z-index: 500;
+            }
+
+            .image:hover a span {
+              top: 50%;
+              position: absolute;
+              left: -20px;
+              right: 0;
+              transform: translateY(-50%);
+            }
+
+            .image a {
+              display: block;
+              position: absolute;
+              top: 100%;
+              opacity: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              text-align: center;
+              color: inherit;
+            }
+
+            // End hover
+
+
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50px;
+            }
+
+            span {
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .see-more {
+      button {
+        font-size: 12px;
+        font-weight: 700;
+        padding: 10px 20px;
+        vertical-align: middle;
+        border-radius: 30px;
+      }
+    }
+
+
+    // Tracks Right side
+    .tracks {
+      .right-panel {
+        padding: 20px 0px;
+
+        .top-tracks {
+
+          height: 900px;
+
+          h5 {
+            font-size: 19px;
+            width: 250px;
+            font-weight: 900;
+            margin-left: 40px;
+            margin-bottom: 10px;
+          }
+
+          ul {
+            margin-top: 30px;
+
+            li {
+              list-style: none;
+              min-width: 90vw;
+              // Hover image
+
+              .time {
+                font-size: 14px;
+                margin-top: 10px;
+              }
 
               .image {
                 position: relative;

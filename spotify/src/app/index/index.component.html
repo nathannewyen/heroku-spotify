@@ -30,7 +30,7 @@
 
   <div class="container-fluid">
     <div class="info row">
-      <div class="col artists">
+      <div class="col-xl-6 artists">
         <div class="row left-panel">
           <div class="col top-artists">
             <h5 class="text-left">Top Artists of All Time</h5>
@@ -48,19 +48,19 @@
               </li>
             </ul>
           </div>
-          <div class=" col see-more">
+          <div class="col see-more">
             <button type="submit" class="btn btn-outline-light float-right" [routerLink]="['/artists']">
               SEE MORE
             </button>
           </div>
         </div>
       </div>
-      <div class="col tracks">
+      <div class="col-xl-6  tracks">
         <div class="row right-panel">
           <div class="col top-tracks">
             <h5 class="text-left ">Top Tracks of All Time</h5>
             <ul *ngFor="let track of topTracksShortTerm; let index = index">
-              <li class="text-left" *ngIf="index < 10">
+              <li class="text-left clearfix" *ngIf="index < 10">
                 <div class="left d-inline-block">
                   <div class="image d-inline-block">
                     <img src="{{ track.album.images[1].url }}" alt="test" />

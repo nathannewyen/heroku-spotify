@@ -1,8 +1,8 @@
 <div id="profile" class="text-center">
-  <div *ngIf="user_image.length > 0">
+  <div class="img-profile" *ngIf="user_image.length > 0">
     <img src="{{user_image[0].url}}" alt="profile-photo">
   </div>
-  <div *ngIf="user_image.length == 0">
+  <div class="img-profile" *ngIf="user_image.length == 0">
     <i class="fas fa-user-alt"></i>
   </div>
   <h1>{{user_name}}</h1>
