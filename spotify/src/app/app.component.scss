@@ -17,6 +17,10 @@
     min-height: 100vh;
     position: fixed;
 
+    .small-screen {
+      display: none;
+    }
+
     nav {
       margin-top: 30px;
     }
@@ -111,6 +115,10 @@
     min-height: 100vh;
     position: fixed;
 
+    .small-screen {
+      display: none;
+    }
+
     nav {
       margin-top: 30px;
     }
@@ -199,6 +207,10 @@
     width: 100px !important;
     position: fixed;
 
+    .small-screen {
+      display: none;
+    }
+
     nav {
       margin-top: 30px;
     }
@@ -286,6 +298,10 @@
     width: 100px !important;
     position: fixed;
 
+    .small-screen {
+      display: none;
+    }
+
     nav {
       margin-top: 30px;
     }
@@ -368,6 +384,12 @@
   }
 
   #navbar {
+
+    .big-screen {
+      display: none;
+    }
+
+
 
     nav {
       background-color: black;

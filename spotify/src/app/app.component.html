@@ -1,7 +1,7 @@
 <div class="wrapper">
   <!-- Navbar -->
   <div id="navbar">
-    <nav>
+    <nav class="big-screen">
       <div class="text-center">
         <a [routerLink]="['']" class="nav-image">
           <img src="https://image.flaticon.com/icons/svg/2111/2111624.svg" alt="logo" />
@@ -45,6 +45,54 @@
         </a>
       </div>
     </nav>
+
+
+    <!-- Tablet -->
+    <nav class="small-screen fixed-bottom">
+      <div class="text-center">
+        <a [routerLink]="['']" class="nav-image">
+          <img src="https://image.flaticon.com/icons/svg/2111/2111624.svg" alt="logo" />
+        </a>
+      </div>
+      <ul class="navbar-nav text-center">
+        <li class="nav-item active">
+          <a [routerLink]="['']" class="nav-link">
+            <i class="fas fa-user"></i>
+            <p>Profile</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/artists']" class="nav-link">
+            <i class="fas fa-microphone-stand"></i>
+            <p>Top Artists</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/tracks']" class="nav-link">
+            <i class="fas fa-music"></i>
+            <p>Top Tracks</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/recent']" class="nav-link">
+            <i class="fas fa-history"></i>
+            <p>Recent</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/playlists']" class="nav-link">
+            <i class="fas fa-list-music"></i>
+            <p>Playlist</p>
+          </a>
+        </li>
+      </ul>
+      <div class="bottom text-center">
+        <a href="https://github.com/nathannewyen/spotify_project" target="_blank" class="nav-link">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </nav>
+    <!-- End Tablet -->
   </div>
   <!-- End Navbar -->
 

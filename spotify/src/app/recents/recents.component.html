@@ -1,8 +1,8 @@
 <div class="recent">
   <h4>Recently Played Tracks</h4>
 
-  <div class="recent-song" *ngFor="let recent of user_current_tracks">
-    <ul>
+  <div class="recent-song">
+    <ul *ngFor="let recent of user_current_tracks">
       <li>
         <div class="image d-inline-block">
           <img src="{{recent.track.album.images[2].url}}" alt="{{recent.track.name}}" class="d-inline-block">

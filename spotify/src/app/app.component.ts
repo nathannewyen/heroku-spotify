@@ -32,10 +32,6 @@ export class AppComponent {
     const accessToken = localStorage.getItem(itemId);
 
     // jQuery
-    if ($(window).width() <= 768) {
-      $("nav").addClass("fixed-bottom");
-    }
-
     this.spinner.show();
 
     setTimeout(() => {
