@@ -1,9 +1,8 @@
 // iMac 27"
 @media (min-width: 1600px) {
   .container-fluid {
-    .info {
-      margin-top: 150px;
-    }
+
+    padding: 100px;
 
     img {
       width: 320px;
@@ -64,9 +63,7 @@
 // Macbook 15
 @media (min-width: 1300px) {
   .container-fluid {
-    .info {
-      margin-top: 150px;
-    }
+    padding: 100px;
 
     img {
       width: 320px;
@@ -127,9 +124,7 @@
 // Macbook 13
 @media (min-width: 1025px) {
   .container-fluid {
-    .info {
-      margin-top: 150px;
-    }
+    padding: 100px;
 
     img {
       width: 320px;
@@ -190,9 +185,7 @@
 // iPad Pro
 @media (max-width: 1024px) {
   .container-fluid {
-    .info {
-      margin-top: 150px;
-    }
+    padding: 100px;
 
     img {
       width: 320px;
